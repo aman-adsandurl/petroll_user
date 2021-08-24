@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">PET Roll</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="skip">Skip</string>
+    <string name="headingfirst">Market</string>
+    <string name="messagefirst">"Lorem Ipsum test "</string>
+    <string name="headingsecond">Community</string>
+    <string name="headingthird">Services</string>
+    <string name="back">Back</string>
+    <string name="sigin_heading">Choose your service</string>
+    <string name="sigin_message">Please Choose service you going to provide from below listing to get started.</string>
+    <string name="business_name">Business Name</string>
+    <string name="sigup_heading">Sign up your account</string>
+    <string name="singup_message">Welcome! \n Please continue with your credentials</string>
+    <string name="hint_name">Enter Name</string>
+    <string name="hint_email">Enter Email</string>
+    <string name="hint_password">Enter Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="accept_terms">I accept the Terms and Conditions</string>
+    <string name="login_heading">Let\'s Sign you in</string>
+    <string name="sigin_message1">Welcome Back! \n Please continue with your credentials</string>
+    <string name="continue_guest">Continue as Guest</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="forgot_password_message">Please enter your registered mobile number \n to reset your password</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="otp_heading">OTP Verification</string>
+    <string name="otp_msg">A 6 - Digit Pin has been sent to your \n Phone number. Enter it below to continue</string>
+    <string name="continue_str">Continue</string>
+</resources>
