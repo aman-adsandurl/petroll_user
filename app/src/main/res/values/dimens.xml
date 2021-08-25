@@ -20,4 +20,10 @@
     <dimen name="dimen300">300dp</dimen>
     <dimen name="dimen60">60dp</dimen>
     <dimen name="dimen70">70dp</dimen>
+    <dimen name="dimen18">18dp</dimen>
+    <dimen name="dimen16">16dp</dimen>
+    <dimen name="dimen140">140dp</dimen>
+    <dimen name="dimen160">160dp</dimen>
+    <dimen name="dimen4">4dp</dimen>
+    <dimen name="dimen8">8dp</dimen>
 </resources>

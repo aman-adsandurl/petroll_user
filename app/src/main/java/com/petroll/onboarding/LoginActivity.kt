@@ -3,6 +3,7 @@ package com.petroll.onboarding
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.petroll.dashboard.DashboardActivity
 import com.petroll.databinding.ActivityLoginBinding
 
 class LoginActivity: AppCompatActivity() {
@@ -18,6 +19,12 @@ class LoginActivity: AppCompatActivity() {
     }
 
     fun switchToSignUp() {
+
+        binding.cvSignIn.setOnClickListener{
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.tvSignUp.setOnClickListener {
             val intent = Intent(this, RegisterationActivity::class.java)
             startActivity(intent)

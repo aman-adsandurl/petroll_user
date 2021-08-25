@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/ll_bg"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:background="@drawable/service_circle"
+    android:backgroundTint="@color/gray"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_service"
+        android:layout_width="@dimen/dimen60"
+        android:layout_height="@dimen/dimen60"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_heading"
+        android:layout_width="wrap_content"
+        tools:text="ladflj"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/dimen20"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen15"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

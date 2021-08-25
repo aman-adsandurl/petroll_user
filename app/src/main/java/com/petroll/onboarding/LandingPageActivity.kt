@@ -1,7 +1,11 @@
 package com.petroll.onboarding
 
 import android.content.Intent
+import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.ArrayAdapter
+import android.widget.TextView
+import com.petroll.R
 import com.petroll.baseclasses.BaseActivity
 import com.petroll.databinding.ActivityLandingPageBinding
 
@@ -22,5 +26,10 @@ class LandingPageActivity : BaseActivity() {
             val intent = Intent(this, RegisterationActivity::class.java)
             startActivity(intent)
         }
+
+        val listItems = arrayOf("Select Service Category")
+        val adapter = ArrayAdapter(this, R.layout.custom_textview, listItems)
+        adapter.setDropDownViewResource(R.layout.custom_textview)
+        binding.spinnerServiceCategory.adapter = adapter
     }
 }

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/app_bg"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dimen120"
+            android:layout_height="@dimen/dimen80"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/petroll_icon"
+            android:id="@+id/petroll_icon"
+            android:layout_marginTop="@dimen/dimen20"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/back_layout"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/petroll_icon"
+            android:layout_marginStart="@dimen/dimen20"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/dimen20"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen18"
+                android:layout_marginTop="@dimen/dimen5"
+                android:text="@string/dashboard_heading"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen16"
+                android:layout_marginTop="@dimen/dimen5"
+                android:text="@string/dashboard_msg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dimen30"
+                android:gravity="center">
+
+                <com.petroll.utils.ServiceLayout
+                    android:id="@+id/provider"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen160"/>
+
+                <com.petroll.utils.ServiceLayout
+                    android:id="@+id/owner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen160"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

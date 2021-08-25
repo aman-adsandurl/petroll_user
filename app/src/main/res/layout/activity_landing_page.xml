@@ -51,12 +51,14 @@
             android:elevation="@dimen/dimen5"
             android:layout_marginTop="@dimen/dimen20"
             android:layout_height="@dimen/dimen60">
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/spinner_service_category"
-            android:layout_width="match_parent"
-           android:layout_height="match_parent"
-            android:padding="@dimen/dimen10"
-            android:background="@drawable/spinner_bg" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_service_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/SpinnerTheme"
+                android:background="@drawable/spinner_bg"
+                android:padding="@dimen/dimen10" />
             <ImageView
                 android:layout_width="@dimen/dimen15"
                 android:layout_height="@dimen/dimen15"

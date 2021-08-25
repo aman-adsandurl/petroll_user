@@ -9,8 +9,14 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="skip_circle_color">#F1379D</color>
+    <color name="indicator_highlight">#F01159</color>
     <color name="gray">#c3c3c3</color>
     <color name="offWhite">#0D000000</color>
     <color name="hint">#CCCCCC</color>
+    <color name="indicator_not_active">#50505042</color>
     <color name="overlay_bg">#F5EEEE</color>
+    <color name="provider_c">#EFEFEF</color>
+    <color name="owner_c">#DBFEDB</color>
+    <color name="dashboard_bg">#272727</color>
+    <color name="banner_bg">#FFE1D4</color>
 </resources>

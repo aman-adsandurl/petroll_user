@@ -37,4 +37,11 @@
     <string name="otp_heading">OTP Verification</string>
     <string name="otp_msg">A 6 - Digit Pin has been sent to your \n Phone number. Enter it below to continue</string>
     <string name="continue_str">Continue</string>
+    <string name="dashboard_heading">Who you are ?</string>
+    <string name="dashboard_msg">Select your user type</string>
+    <string name="service_provider">Service \n Provider</string>
+    <string name="owner">Pet Owner</string>
+    <string name="service">Service</string>
+    <string name="market">Market</string>
+    <string name="community">Community</string>
 </resources>
