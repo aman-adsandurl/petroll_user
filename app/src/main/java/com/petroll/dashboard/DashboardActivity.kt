@@ -34,8 +34,10 @@ class DashboardActivity : AppCompatActivity() {
         binding.serviceLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.white))
         binding.marketLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.white))
 
-        setActionBar(binding.toolbar)
-
+        setSupportActionBar(binding.toolbar)
+        val actionBar = supportActionBar
+        actionBar!!.setHomeAsUpIndicator(R.drawable.left_drawer)
+        actionBar.setDisplayHomeAsUpEnabled(true)
 
         setAdapter()
         setViewPager()
