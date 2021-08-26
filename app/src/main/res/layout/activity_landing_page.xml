@@ -7,99 +7,101 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@drawable/screen_bg"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_bg">
 
-    <include layout="@layout/layout_back" />
+        <include layout="@layout/layout_back" />
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="@dimen/dimen120"
-        android:layout_height="@dimen/dimen80"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/petroll_icon"
-        android:id="@+id/petroll_icon"
-        android:layout_marginTop="@dimen/dimen20"
-        android:layout_below="@+id/back_layout"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="@dimen/dimen20"
-        android:layout_marginTop="@dimen/dimen20"
-        android:layout_marginEnd="@dimen/dimen20"
-        android:layout_below="@+id/petroll_icon"
-        android:layout_height="wrap_content">
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:text="@string/sigin_heading"
-        android:textSize="@dimen/text18"
-        android:fontFamily="@font/poppins_semibold"
-        android:textColor="@color/black"
-        android:layout_height="wrap_content"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:text="@string/sigin_message"
-            android:layout_width="match_parent"
-            android:textColor="@color/black"
-            android:layout_marginTop="@dimen/dimen10"
-            android:fontFamily="@font/poppins_regular"
-            android:layout_height="wrap_content"/>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:elevation="@dimen/dimen5"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/petroll_icon"
+            android:layout_width="@dimen/dimen120"
+            android:layout_height="@dimen/dimen80"
+            android:layout_below="@+id/back_layout"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dimen20"
-            android:layout_height="@dimen/dimen60">
+            android:src="@drawable/petroll_icon" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinner_service_category"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/petroll_icon"
+            android:layout_marginStart="@dimen/dimen20"
+            android:layout_marginTop="@dimen/dimen20"
+            android:layout_marginEnd="@dimen/dimen20"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                style="@style/SpinnerTheme"
-                android:background="@drawable/spinner_bg"
-                android:padding="@dimen/dimen10" />
-            <ImageView
-                android:layout_width="@dimen/dimen15"
-                android:layout_height="@dimen/dimen15"
-                android:layout_alignParentEnd="true"
-                android:alpha="0.6"
-                android:layout_marginEnd="@dimen/dimen20"
-                android:layout_centerVertical="true"
-                android:src="@drawable/back"/>
-        </RelativeLayout>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/sigin_heading"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text18" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/edt_business_name"
-            android:textColorHint="@color/hint"
-            android:paddingStart="@dimen/dimen20"
-            android:layout_marginTop="@dimen/dimen20"
-            android:background="@drawable/spinner_bg"
-            android:hint="@string/business_name"
-            android:fontFamily="@font/poppins_regular"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen60"/>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_next"
-            android:layout_width="match_parent"
-            app:cardBackgroundColor="@color/black"
-            android:layout_marginTop="@dimen/dimen30"
-            app:cardCornerRadius="@dimen/dimen10"
-            android:layout_height="@dimen/dimen60">
-
-            <TextView
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:text="@string/next"
-                android:textSize="@dimen/text18"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
                 android:fontFamily="@font/poppins_regular"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:text="@string/sigin_message"
+                android:textColor="@color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:layout_marginTop="@dimen/dimen20"
+                android:elevation="@dimen/dimen5">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spinner_service_category"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/spinner_bg"
+                    android:padding="@dimen/dimen10" />
+
+                <ImageView
+                    android:layout_width="@dimen/dimen15"
+                    android:layout_height="@dimen/dimen15"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen20"
+                    android:alpha="0.6"
+                    android:src="@drawable/back" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_business_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:layout_marginTop="@dimen/dimen20"
+                android:background="@drawable/spinner_bg"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="@string/business_name"
+                android:paddingStart="@dimen/dimen20"
+                android:textColorHint="@color/hint" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:layout_marginTop="@dimen/dimen30"
+                app:cardBackgroundColor="@color/black"
+                app:cardCornerRadius="@dimen/dimen10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text18" />
 
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
-</RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>

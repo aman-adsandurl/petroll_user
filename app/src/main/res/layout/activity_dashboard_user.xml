@@ -4,12 +4,32 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/overlay_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_bg" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_top"
             android:layout_width="match_parent"
             android:layout_marginStart="@dimen/dimen20"
             android:layout_marginEnd="@dimen/dimen20"
@@ -34,6 +54,7 @@
             android:layout_marginTop="@dimen/dimen20"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen200">
+
             <com.petroll.utils.ServiceLayout
                 android:layout_width="0dp"
                 android:id="@+id/market_layout"
@@ -60,4 +81,6 @@
 
     </LinearLayout>
 
+    </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
