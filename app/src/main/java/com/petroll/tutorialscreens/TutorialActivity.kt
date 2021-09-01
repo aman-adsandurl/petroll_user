@@ -60,12 +60,21 @@ class TutorialActivity : AppCompatActivity() {
             if (binding.slider.currentItem == (NUM_PAGES - 1)) {
                 // todo intent to call sigin activity
                 val intent = Intent(this, LandingPageActivity::class.java)
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-//                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
+                finish()
             } else {
                 binding.slider.currentItem = binding.slider.currentItem + 1
             }
+        }
+
+        binding.rlSkip.setOnClickListener {
+            val intent = Intent(this, LandingPageActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
         }
     }
 

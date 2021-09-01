@@ -27,6 +27,10 @@ class LandingPageActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        binding.back.backLayout.setOnClickListener {
+            finish()
+        }
+
         val listItems = arrayOf("Select Service Category")
         val adapter = ArrayAdapter(this, R.layout.custom_textview, listItems)
         adapter.setDropDownViewResource(R.layout.custom_textview)

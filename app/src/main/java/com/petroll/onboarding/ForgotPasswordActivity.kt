@@ -20,6 +20,9 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     fun clickListeners(){
+        binding.back.backLayout.setOnClickListener {
+            finish()
+        }
 
         binding.cvGetOtp.setOnClickListener{
 //            if (isOtp()) {

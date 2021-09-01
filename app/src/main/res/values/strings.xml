@@ -44,4 +44,18 @@
     <string name="service">Service</string>
     <string name="market">Market</string>
     <string name="community">Community</string>
+    <string name="open">open</string>
+    <string name="close">Close</string>
+    <string name="my_appointment">My Appointment</string>
+    <string name="my_cart">My Cart</string>
+    <string name="wishlist">My Wishlist</string>
+    <string name="chat">Chat</string>
+    <string name="my_orders">My Orders</string>
+    <string name="fav">My Favourites</string>
+    <string name="following">My Following</string>
+    <string name="my_sold">My Sold Item</string>
+    <string name="my_address">My Address</string>
+    <string name="my_auction">My Auction</string>
+    <string name="blocklist">Blocklist</string>
+    <string name="setting">Settings</string>
 </resources>

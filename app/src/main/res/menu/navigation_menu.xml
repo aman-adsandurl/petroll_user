@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <group android:id="@+id/gp_appnt">
+    <item
+        android:icon="@drawable/ic_appointment"
+        android:id="@+id/nav_appnt"
+        android:title="@string/my_appointment" />
+    </group>
+
+    <group android:id="@+id/gp_cart">
+    <item
+        android:icon="@drawable/ic_cart"
+        android:id="@+id/nav_cart"
+        android:title="@string/my_cart" />
+    </group>
+
+    <group android:id="@+id/gp_wish">
+    <item
+        android:icon="@drawable/ic_wishlist"
+        android:id="@+id/nav_wishlist"
+        android:title="@string/wishlist" />
+    </group>
+
+    <group android:id="@+id/gp_chat">
+    <item
+        android:icon="@drawable/ic_chat"
+        android:id="@+id/nav_chat"
+        android:title="@string/chat" />
+    </group>
+
+    <group android:id="@+id/gp_order">
+    <item
+        android:icon="@drawable/ic_order"
+        android:id="@+id/nav_order"
+        android:title="@string/my_orders" />
+    </group>
+
+    <group android:id="@+id/gp_fav">
+    <item
+        android:icon="@drawable/ic_fav"
+        android:id="@+id/nav_fav"
+        android:title="@string/fav" />
+    </group>
+
+    <group android:id="@+id/gp_foll">
+    <item
+        android:icon="@drawable/ic_following"
+        android:id="@+id/nav_following"
+        android:title="@string/following" />
+    </group>
+
+    <group android:id="@+id/gp_sold">
+    <item
+        android:icon="@drawable/ic_sold"
+        android:id="@+id/nav_sold"
+        android:title="@string/my_sold" />
+    </group>
+
+    <group android:id="@+id/gp_addr">
+    <item
+        android:icon="@drawable/ic_address"
+        android:id="@+id/nav_address"
+        android:title="@string/my_address" />
+    </group>
+
+    <group android:id="@+id/gp_aution">
+    <item
+        android:icon="@drawable/ic_auction"
+        android:id="@+id/nav_auction"
+        android:title="@string/my_auction" />
+    </group>
+
+    <group android:id="@+id/gp_block">
+    <item
+        android:icon="@drawable/ic_block"
+        android:id="@+id/nav_blocklist"
+        android:title="@string/blocklist" />
+    </group>
+
+    <group android:id="@+id/gp_sett">
+    <item
+        android:icon="@drawable/ic_setting"
+        android:id="@+id/nav_setting"
+        android:title="@string/setting" />
+    </group>
+
+</menu>

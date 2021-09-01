@@ -10,14 +10,16 @@
         android:layout_height="match_parent"
         android:background="@drawable/screen_bg">
 
-        <include layout="@layout/layout_back" />
+        <include
+            android:id="@+id/back"
+            layout="@layout/layout_back" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/petroll_icon"
             android:layout_width="@dimen/dimen120"
             android:layout_height="@dimen/dimen80"
-            android:layout_below="@+id/back_layout"
+            android:layout_below="@+id/back"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dimen20"
             android:src="@drawable/petroll_icon" />

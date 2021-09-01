@@ -44,6 +44,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
 
+        <activity android:name=".dashboard.market.MarketActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
     </application>
 
 </manifest>

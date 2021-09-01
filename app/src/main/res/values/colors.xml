@@ -19,4 +19,6 @@
     <color name="owner_c">#DBFEDB</color>
     <color name="dashboard_bg">#272727</color>
     <color name="banner_bg">#FFE1D4</color>
+    <color name="bottom_nav_color">#272727</color>
+    <color name="bottom_nav_inact">#949494</color>
 </resources>
