@@ -58,4 +58,20 @@
     <string name="my_auction">My Auction</string>
     <string name="blocklist">Blocklist</string>
     <string name="setting">Settings</string>
+    <string name="shop">Shops</string>
+    <string name="buy_sell">Buy/Sell</string>
+    <string name="auction">Auction</string>
+    <string name="vet">Veterinary</string>
+    <string name="trainer">Trainer</string>
+    <string name="peer">Peer to Peer</string>
+    <string name="spa_and_body"><![CDATA[Spa & Body]]></string>
+    <string name="consultant">Comsultant</string>
+    <string name="post">Post</string>
+    <string name="mating">Matings</string>
+    <string name="lost_found"><![CDATA[Lost & Found]]></string>
+    <string name="adoption">Adoption</string>
+    <string name="post_incident">Post Incident</string>
+    <string name="find_help">Find Help</string>
+    <string name="guide">Guide</string>
+    <string name="news_event"><![CDATA[News \n & Event]]></string>
 </resources>

@@ -29,4 +29,5 @@
     <dimen name="dimen25">25dp</dimen>
     <dimen name="dimen14">14dp</dimen>
     <dimen name="dimen35">35dp</dimen>
+    <dimen name="text20">20dp</dimen>
 </resources>

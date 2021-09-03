@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/overlay_bg"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/screen_bg"
+        android:layout_above="@+id/bottm_nav">
+
+        <LinearLayout
+            android:id="@+id/rl_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/back"
+                layout="@layout/layout_app_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/icon_layout"
+                layout="@layout/layout_icon"
+                android:layout_width="0dp"
+                android:layout_marginStart="@dimen/dimen5"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_top_bar"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_below="@+id/rl_top_bar"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen160"
+                android:layout_marginTop="@dimen/dimen20">
+
+                <com.petroll.utils.ServiceLayout
+                    android:id="@+id/vet_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <com.petroll.utils.ServiceLayout
+                    android:id="@+id/trainer_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <com.petroll.utils.ServiceLayout
+                android:id="@+id/peer_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen160"
+                android:layout_marginTop="@dimen/dimen20">
+
+                <com.petroll.utils.ServiceLayout
+                    android:id="@+id/spa_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+
+                <com.petroll.utils.ServiceLayout
+                    android:id="@+id/consultant_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottm_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mbn_backgroundBottomColor="@color/bottom_nav_color"
+        android:layout_alignParentBottom="true"
+        app:mbn_circleColor="@color/indicator_highlight"
+        app:mbn_selectedIconColor="@color/white"
+        app:mbn_defaultIconColor="@color/bottom_nav_inact"/>
+</RelativeLayout>

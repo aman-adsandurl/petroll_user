@@ -3,15 +3,12 @@ package com.petroll.dashboard
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.view.Menu
-import android.view.MenuItem
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.appcompat.widget.Toolbar
-import androidx.core.view.MenuCompat
 import androidx.viewpager.widget.ViewPager
 import com.petroll.R
+import com.petroll.dashboard.community.CommunityActivity
 import com.petroll.dashboard.market.MarketActivity
+import com.petroll.dashboard.service.ServiceActivity
 import com.petroll.databinding.ActivityDashboardUserBinding
 import com.petroll.utils.BaseActivity
 import com.petroll.utils.ViewPagerAdapter
@@ -48,29 +45,20 @@ class DashboardActivity : BaseActivity() {
             startActivity(intent)
         }
 
+        binding.serviceLayout.setOnClickListener {
+            val intent = Intent(this, ServiceActivity::class.java)
+            startActivity(intent)
+        }
 
-        setAdapter()
+        binding.communityLayout.setOnClickListener {
+            val intent = Intent(this, CommunityActivity::class.java)
+            startActivity(intent)
+        }
+
         setViewPager()
     }
 
-
-    // methods for auto scroll
-    lateinit var actionBarDrawerToggle : ActionBarDrawerToggle
-    private fun setAdapter() {
-
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
-        actionBarDrawerToggle =
-            ActionBarDrawerToggle(this, binding.drawer, R.string.open, R.string.close)
-
-        binding.drawer.addDrawerListener(actionBarDrawerToggle)
-        actionBarDrawerToggle.syncState();
-        val actionBar = supportActionBar
-        actionBar!!.setHomeAsUpIndicator(R.drawable.left_navigation)
-        actionBar.setDisplayHomeAsUpEnabled(true)
-
-
+    private fun setViewPager() {
         this.adapter = ViewPagerAdapter(listOf(
             R.drawable.shop_ic,
             R.drawable.charity_ic,
@@ -78,24 +66,10 @@ class DashboardActivity : BaseActivity() {
             R.drawable.charity_ic,
             R.drawable.shop_ic
         ), this)
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            true
-        } else super.onOptionsItemSelected(item)
-    }
-
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.navigation_menu, menu)
-//        MenuCompat.setGroupDividerEnabled(menu, true)
-//        return true;
-//    }
-
-    private fun setViewPager() {
         binding.vpTop.adapter = adapter
         /**
-         * Start automatic scrolling with an
+         * Start automatic scrolSignling with an
          * interval of 3 seconds.
          */
         binding.vpTop.autoScroll(3000)

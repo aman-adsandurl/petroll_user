@@ -21,4 +21,19 @@
     <color name="banner_bg">#FFE1D4</color>
     <color name="bottom_nav_color">#272727</color>
     <color name="bottom_nav_inact">#949494</color>
+
+    <color name="light_yellow">#F8FEDB</color>
+    <color name="lighter_yellow">#DBFEDB</color>
+    <color name="ligh_greyish">#DBF6FE</color>
+
+    <color name="light_blue1">#DBE8FE</color>
+    <color name="light_blue2">#DBF6FE</color>
+    <color name="pink1">#EDDBFE</color>
+    <color name="yellow1">#DBFEE0</color>
+    <color name="yellow2">#FEEFDB</color>
+    
+    <color name="green1">#E9E9E9</color>
+    <color name="pink2">#FEDBDB</color>
+    <color name="blue3">#E7DBFE</color>
+
 </resources>

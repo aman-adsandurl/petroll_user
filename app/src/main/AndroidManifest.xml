@@ -48,6 +48,14 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
 
+        <activity android:name=".dashboard.service.ServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.community.CommunityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
     </application>
 
 </manifest>
