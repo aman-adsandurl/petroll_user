@@ -15,10 +15,7 @@ import com.petroll.databinding.ActivityBaseBinding
 
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
-import com.petroll.Navigation.fragments.AddAddressFragment
-import com.petroll.Navigation.fragments.FollowingFragment
-import com.petroll.Navigation.fragments.SoldFragment
-import com.petroll.Navigation.fragments.WishlistFragment
+import com.petroll.Navigation.fragments.*
 import com.petroll.R
 
 
@@ -147,9 +144,11 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.nav_wishlist -> setFragment(WishlistFragment())
-            R.id.nav_following -> setFragment(FollowingFragment())
+            R.id.nav_following -> setFragment(FollowingFragment(false))
             R.id.nav_sold -> setFragment(SoldFragment())
             R.id.nav_address -> setFragment(AddAddressFragment())
+            R.id.nav_auction -> setFragment(AuctionFragment())
+            R.id.nav_blocklist -> setFragment(FollowingFragment(true))
         }
         baseBind.drawer.closeDrawer(GravityCompat.START);
         return true;

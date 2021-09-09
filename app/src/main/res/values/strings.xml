@@ -52,7 +52,7 @@
     <string name="chat">Chat</string>
     <string name="my_orders">My Orders</string>
     <string name="fav">My Favourites</string>
-    <string name="following">My Following</string>
+    <string name="following">My\nFollowing</string>
     <string name="my_sold">My Sold Item</string>
     <string name="my_address">My Address</string>
     <string name="my_auction">My Auction</string>
@@ -84,8 +84,14 @@
     <string name="consultation_fee">Consultation Fee</string>
     <string name="wishlist_back">Wishlist</string>
     <string name="product">Products</string>
-    <string name="select_address">Select \n Address</string>
+    <string name="select_address">Select\nAddress</string>
     <string name="add_new_address">Add New Address</string>
     <string name="ongoing">Ongoing</string>
     <string name="past">Past</string>
+    <string name="total_bidder">Total Bidders</string>
+    <string name="auction_ends">Auction Ends</string>
+    <string name="current_bid">Current Bid</string>
+    <string name="final_price">Final Bid</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="unblock">Unblock</string>
 </resources>

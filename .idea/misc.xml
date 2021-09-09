@@ -18,6 +18,7 @@
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/drawable/skip_circle.xml" value="0.2851851851851852" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/drawable/small_circle.xml" value="0.29907407407407405" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/drawable/spinner_bg.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/drawable/tab_bg.xml" value="0.2574074074074074" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/drawable/tab_selected_bg.xml" value="0.262037037037037" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/activity_base.xml" value="0.2821557971014493" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/activity_community.xml" value="0.271286231884058" />
@@ -52,6 +53,8 @@
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/nav_header_main.xml" value="0.2776268115942029" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/petrol_navigation_cell.xml" value="0.2907608695652174" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_address.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_appointment.xml" value="0.2504528985507246" />
+        <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_auction.xml" value="0.2164855072463768" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_following.xml" value="0.24139492753623187" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_notification.xml" value="0.16145307769929365" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_sold.xml" value="0.24139492753623187" />

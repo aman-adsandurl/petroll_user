@@ -13,7 +13,7 @@ import com.petroll.dashboard.adapter.WishlistAdapter
 import com.petroll.databinding.FragmentAppointmentBinding
 import com.petroll.databinding.FragmentFollowingBinding
 
-class FollowingFragment: Fragment() {
+class FollowingFragment(val isBlock: Boolean): Fragment() {
 
     lateinit var binding: FragmentFollowingBinding
 
@@ -30,12 +30,16 @@ class FollowingFragment: Fragment() {
 
     private fun setUpRecyclerView() {
         binding.rvFollowing.layoutManager = LinearLayoutManager(context)
-        val adapter = FollowingAdapter()
+        val adapter = FollowingAdapter(isBlock, requireContext())
         binding.rvFollowing.adapter = adapter
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.following)
+        if (!isBlock) {
+            binding.back.tvBack.text = resources.getText(R.string.following)
+        } else {
+            binding.back.tvBack.text = resources.getText(R.string.blocklist)
+        }
         binding.back.backLayout.setOnClickListener {
             (activity as DashboardActivity).onHome()
         }

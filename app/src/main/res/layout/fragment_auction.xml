@@ -19,6 +19,7 @@
     <LinearLayout
         android:layout_marginTop="@dimen/dimen10"
         android:layout_width="match_parent"
+        android:background="@drawable/tab_bg"
         android:layout_marginStart="@dimen/dimen50"
         android:layout_marginEnd="@dimen/dimen50"
         android:layout_height="wrap_content">
@@ -45,7 +46,6 @@
             android:layout_width="0dp"
             android:id="@+id/rl_past"
             android:layout_weight="1"
-            android:background="@drawable/spinner_bg"
             android:layout_height="@dimen/dimen50">
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -67,4 +67,5 @@
         android:layout_marginTop="@dimen/dimen10"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </LinearLayout>
