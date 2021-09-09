@@ -56,7 +56,7 @@ class TutorialActivity : AppCompatActivity() {
         })
 
         binding.rlNext.setOnClickListener {
-            Log.e("anil", "------ > " + binding.slider.currentItem.toString());
+            Log.e("anim", "------ > " + binding.slider.currentItem.toString());
             if (binding.slider.currentItem == (NUM_PAGES - 1)) {
                 // todo intent to call sigin activity
                 val intent = Intent(this, LandingPageActivity::class.java)

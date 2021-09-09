@@ -2,15 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:background="@color/overlay_bg"
     android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/screen_bg"
-        android:layout_above="@+id/bottm_nav">
 
         <LinearLayout
             android:id="@+id/rl_top_bar"
@@ -40,7 +32,6 @@
             android:layout_below="@+id/rl_top_bar"
             android:layout_height="match_parent">
             <LinearLayout
-                android:layout_below="@+id/rl_top_bar"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -128,15 +119,4 @@
             </LinearLayout>
 
         </ScrollView>
-    </RelativeLayout>
-
-    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
-        android:id="@+id/bottm_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:mbn_backgroundBottomColor="@color/bottom_nav_color"
-        android:layout_alignParentBottom="true"
-        app:mbn_circleColor="@color/indicator_highlight"
-        app:mbn_selectedIconColor="@color/white"
-        app:mbn_defaultIconColor="@color/bottom_nav_inact"/>
 </RelativeLayout>

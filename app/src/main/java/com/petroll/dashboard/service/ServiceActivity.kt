@@ -17,10 +17,10 @@ class ServiceActivity : BaseActivity() {
         binding = ActivityServiceBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpBackLayout()
-
+        hideContent()
         setUpIconLayout()
         // todo to shift it to base activity
-        setUpBottomNav(binding.bottmNav, false)
+        setUpBottomClickedView(false)
     }
 
     private fun setUpIconLayout() {

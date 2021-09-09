@@ -6,9 +6,19 @@
     android:fitsSystemWindows="true"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/overlay_bg"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_bg">
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dimen50"
         android:layout_height="match_parent">
 
         <include
@@ -17,11 +27,51 @@
 
         <FrameLayout
             android:id="@+id/content"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/content_activity"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent"/>
+
     </LinearLayout>
 
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen70"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_curve">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text16" />
+
+            </RelativeLayout>
+
+        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+            android:id="@+id/bottm_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mbn_backgroundBottomColor="@color/bottom_nav_color"
+            android:layout_alignParentBottom="true"
+            app:mbn_circleColor="@color/indicator_highlight"
+            app:mbn_selectedIconColor="@color/white"
+            app:mbn_defaultIconColor="@color/bottom_nav_inact"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"

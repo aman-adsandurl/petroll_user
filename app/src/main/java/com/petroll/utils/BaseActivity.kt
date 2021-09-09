@@ -1,37 +1,77 @@
 package com.petroll.utils
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.viewbinding.ViewBinding
+import androidx.core.view.GravityCompat
+import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
-import com.petroll.R
+import com.petroll.dashboard.fragments.HomeFragment
+import com.petroll.dashboard.fragments.NotificationFragment
+import com.petroll.dashboard.fragments.ProfileDashboardFragment
 import com.petroll.databinding.ActivityBaseBinding
 
-//open class BaseActivity<B: ViewBinding>(val bindingFactory: (LayoutInflater) -> B): AppCompatActivity() {
-open class BaseActivity: AppCompatActivity() {
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
+import com.petroll.Navigation.fragments.AddAddressFragment
+import com.petroll.Navigation.fragments.FollowingFragment
+import com.petroll.Navigation.fragments.SoldFragment
+import com.petroll.Navigation.fragments.WishlistFragment
+import com.petroll.R
 
-//    lateinit var bindingBase: B
+
+open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
+
+    val HOME = 1
+    val FEED = 3
+    val NOTIFICATION = 4
+    val PROFILE = 5
+    val FAV = 2
+
+    val WISHLIST = R.id.nav_wishlist
+
     lateinit var baseBind: ActivityBaseBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         baseBind = ActivityBaseBinding.inflate(layoutInflater)
         super.setContentView(baseBind.root)
-//        bindingBase = bindingFactory(layoutInflater)
+        setUpBottomNav()
+        setFragment(HomeFragment())
+        setUpFragmentsBottomBar()
+        setNavigationViewListener()
+    }
+
+    fun hideBottomBar() {
+        baseBind.rlNext.visibility = View.VISIBLE
+        baseBind.tvButton.text = resources.getString(R.string.add_new_address)
+        baseBind.bottmNav.visibility = View.GONE
+    }
+
+    fun showBottomBar() {
+        baseBind.rlNext.visibility = View.GONE
+        baseBind.bottmNav.visibility = View.VISIBLE
     }
 
     override fun setContentView(view: View?) {
-        baseBind.content.removeAllViews()
-        baseBind.content.addView(view)
+        baseBind.contentActivity.removeAllViews()
+        baseBind.contentActivity.addView(view)
         setAdapter()
     }
 
-    lateinit var actionBarDrawerToggle : ActionBarDrawerToggle
+    fun hideContent() {
+        baseBind.content.visibility = View.GONE
+        baseBind.contentActivity.visibility = View.VISIBLE
+    }
+
+    fun showContent() {
+        baseBind.contentActivity.visibility = View.GONE
+        baseBind.content.visibility = View.VISIBLE
+    }
+
+    lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     private fun setAdapter() {
         setSupportActionBar(baseBind.toolbar.toolbar)
 
@@ -45,23 +85,75 @@ open class BaseActivity: AppCompatActivity() {
         actionBar.setDisplayHomeAsUpEnabled(true)
     }
 
+    // bottom bar
+    private fun setUpFragmentsBottomBar() {
+        baseBind.bottmNav.setOnClickMenuListener {
+            when(it.id) {
+                HOME -> setFragment(HomeFragment())
+                NOTIFICATION -> setFragment(NotificationFragment())
+                PROFILE -> setFragment(ProfileDashboardFragment())
+            }
+        }
+    }
+
+    private fun setFragment(fragment: Fragment) {
+        val fm = supportFragmentManager
+        val transaction = fm.beginTransaction()
+        transaction.replace(R.id.content, fragment)
+        transaction.commit()
+    }
+
+    fun onHome() {
+        setFragment(HomeFragment())
+        baseBind.bottmNav.show(HOME)
+    }
+
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             true
         } else super.onOptionsItemSelected(item)
     }
 
-    protected fun setUpBottomNav(bottom: MeowBottomNavigation, isDashboard: Boolean) {
-        bottom.add(MeowBottomNavigation.Model(1, R.drawable.ic_botm_home))
-        bottom.add(MeowBottomNavigation.Model(2, R.drawable.ic_suggestion))
-        bottom.add(MeowBottomNavigation.Model(3, R.drawable.ic_inact_feeds))
-        bottom.add(MeowBottomNavigation.Model(4, R.drawable.ic_inact_notification))
-        bottom.add(MeowBottomNavigation.Model(5, R.drawable.ic_inact_profile))
+    private fun setNavigationViewListener() {
+        val navigationView = findViewById<View>(R.id.nav_view) as NavigationView
+        navigationView.setNavigationItemSelectedListener(this)
+    }
 
+    protected fun setUpBottomNav() {
+        baseBind.bottmNav.add(MeowBottomNavigation.Model(HOME, R.drawable.ic_botm_home))
+        baseBind.bottmNav.add(MeowBottomNavigation.Model(FAV, R.drawable.ic_suggestion))
+        baseBind.bottmNav.add(MeowBottomNavigation.Model(FEED, R.drawable.ic_inact_feeds))
+        baseBind.bottmNav.add(
+            MeowBottomNavigation.Model(
+                NOTIFICATION,
+                R.drawable.ic_inact_notification
+            )
+        )
+        baseBind.bottmNav.add(MeowBottomNavigation.Model(PROFILE, R.drawable.ic_inact_profile))
+    }
+
+    private var selectedItem = 0
+    protected fun getBottomBarTap(): Int {
+        return selectedItem;
+    }
+
+    protected fun setUpBottomClickedView(isDashboard: Boolean) {
         if (isDashboard) {
-            bottom.show(1)
-        }
-        bottom.setOnClickListener {
+            baseBind.bottmNav.show(1)
         }
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.nav_wishlist -> setFragment(WishlistFragment())
+            R.id.nav_following -> setFragment(FollowingFragment())
+            R.id.nav_sold -> setFragment(SoldFragment())
+            R.id.nav_address -> setFragment(AddAddressFragment())
+        }
+        baseBind.drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
+
 }

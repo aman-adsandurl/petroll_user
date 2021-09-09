@@ -74,4 +74,18 @@
     <string name="find_help">Find Help</string>
     <string name="guide">Guide</string>
     <string name="news_event"><![CDATA[News \n & Event]]></string>
+    <string name="notification">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="my_pet">My Pets</string>
+    <string name="preganncy">Pregnancy</string>
+    <string name="vaccine">Vaccine</string>
+    <string name="feeds">Feeds</string>
+    <string name="appointment">Appointments</string>
+    <string name="consultation_fee">Consultation Fee</string>
+    <string name="wishlist_back">Wishlist</string>
+    <string name="product">Products</string>
+    <string name="select_address">Select \n Address</string>
+    <string name="add_new_address">Add New Address</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="past">Past</string>
 </resources>

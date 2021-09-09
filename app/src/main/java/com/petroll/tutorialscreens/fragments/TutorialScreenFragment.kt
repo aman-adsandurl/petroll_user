@@ -1,6 +1,5 @@
 package com.petroll.tutorialscreens.fragments
 
-import android.app.ActionBar
 import android.app.Activity
 import android.graphics.Insets
 import android.os.Build
@@ -11,8 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowInsets
-import android.widget.LinearLayout
-import android.widget.LinearLayout.LayoutParams
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import com.petroll.R
@@ -49,7 +46,7 @@ class TutorialScreenFragment(val item:Int) : Fragment() {
     }
 
     private fun setUpImageText() {
-        Log.e("anil", "value is ----- >  $currentItem");
+        Log.e("anim", "value is ----- >  $currentItem");
 //        binding.ivTutorial.setBackgroundResource(0)
         when (currentItem) {
             0 -> {

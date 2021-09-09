@@ -18,10 +18,10 @@ class CommunityActivity: BaseActivity() {
         binding = ActivityCommunityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpBackLayout()
-
+        hideContent()
         setUpIconLayout()
         // todo to shift it to base activity
-        setUpBottomNav(binding.bottmNav, false)
+        setUpBottomClickedView(false)
     }
 
     private fun setUpIconLayout() {
@@ -110,7 +110,7 @@ class CommunityActivity: BaseActivity() {
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.service)
+        binding.back.tvBack.text = resources.getText(R.string.community)
         binding.back.backLayout.setOnClickListener {
             finish()
         }

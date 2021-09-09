@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/back"
+            layout="@layout/layout_app_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_marginStart="@dimen/dimen10"
+        app:cardElevation="@dimen/dimen8"
+        app:cardCornerRadius="@dimen/dimen8"
+        android:layout_height="@dimen/dimen100">
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="@dimen/dimen60"
+                android:layout_height="@dimen/dimen60"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dimen10"
+                android:src="@drawable/profile_avatar" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dimen5"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="anil manchanda"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="anil@gmail.com"
+                    android:textColor="@color/hint"
+                    android:textSize="@dimen/dimen14" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dimen5"
+                android:src="@drawable/forward_arrow" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen160"
+        android:layout_marginTop="@dimen/dimen20">
+
+        <com.petroll.utils.ServiceLayout
+            android:id="@+id/pet_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <com.petroll.utils.ServiceLayout
+            android:id="@+id/mating_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <com.petroll.utils.ServiceLayout
+            android:id="@+id/pregnancy_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <com.petroll.utils.ServiceLayout
+        android:id="@+id/vaccine_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen10"
+        android:gravity="center" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

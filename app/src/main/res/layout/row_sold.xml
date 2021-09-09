@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:background="@drawable/spinner_bg"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_product"
+            android:src="@drawable/ic_dog_house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_sold"
+            android:background="@drawable/ic_sold_tag_bg"
+            android:layout_width="@dimen/dimen60"
+            android:layout_alignEnd="@+id/ic_product"
+            android:layout_height="@dimen/dimen60">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:text="Sold"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/text14"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:text="Mud Dog House"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="@dimen/dimen10"
+        android:textSize="@dimen/dimen16"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:text="AED 50.00"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="@dimen/dimen10"
+        android:textSize="@dimen/dimen16"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

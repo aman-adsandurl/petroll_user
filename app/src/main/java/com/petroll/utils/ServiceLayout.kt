@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.core.view.marginTop
 import com.petroll.R
 
 class ServiceLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : LinearLayout(context, attrs, defStyleAttr) {
@@ -43,6 +44,10 @@ class ServiceLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) 
     }
 
     public fun setSmallCircle() {
+        val layoutParams: LayoutParams = LayoutParams(LayoutParams.WRAP_CONTENT,
+            LayoutParams.WRAP_CONTENT)
+        layoutParams.setMargins(0,10,0,0)
+        tvMessage.layoutParams = layoutParams
         llBg.background = ContextCompat.getDrawable(context, R.drawable.small_circle)
     }
 
