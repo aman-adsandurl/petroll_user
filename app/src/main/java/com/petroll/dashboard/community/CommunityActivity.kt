@@ -1,10 +1,12 @@
 package com.petroll.dashboard.community
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
 import com.petroll.R
+import com.petroll.dashboard.community.services.*
 import com.petroll.databinding.ActivityCommunityBinding
 import com.petroll.databinding.ActivityServiceBinding
 import com.petroll.utils.BaseActivity
@@ -56,7 +58,7 @@ class CommunityActivity: BaseActivity() {
         binding.adoptionLayout.setImageText(resources.getString(R.string.adoption), R.drawable.ic_adopt)
         binding.postIncidentLayout.setImageText(resources.getString(R.string.post_incident), R.drawable.ic_post_incident)
         binding.helpLayout.setImageText(resources.getString(R.string.find_help), R.drawable.ic_help)
-        binding.newsLayout.setImageText(resources.getString(R.string.news_event), R.drawable.ic_news)
+        binding.newsLayout.setImageText(resources.getString(R.string.news_event), R.drawable.ic_event)
         binding.guideLayout.setImageText(resources.getString(R.string.guide), R.drawable.ic_guide)
 
 
@@ -107,6 +109,48 @@ class CommunityActivity: BaseActivity() {
             resources.getDimension(R.dimen.dimen14)
         )
 
+        binding.postLayout.setOnClickListener {
+            Intent(this, PostActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+        binding.matingLayout.setOnClickListener {
+            Intent(this, MatingsActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+        binding.lostLayout.setOnClickListener {
+            Intent(this, LostFoundActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+        binding.adoptionLayout.setOnClickListener {
+            Intent(this, AdoptionActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+        binding.postIncidentLayout.setOnClickListener {
+            Intent(this, PostIncidentActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+        binding.helpLayout.setOnClickListener {
+            Intent(this, FindHelpActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+        binding.newsLayout.setOnClickListener {
+            Intent(this, NewsEventActivity::class.java).apply {
+                startActivity(this)
+            }
+        }
+//        binding.matingLayout.setSmallCircle()
+//        binding.lostLayout.setSmallCircle()
+//        binding.adoptionLayout.setSmallCircle()
+//        binding.postIncidentLayout.setSmallCircle()
+//        binding.helpLayout.setSmallCircle()
+//        binding.newsLayout.setSmallCircle()
+//        binding.guideLayout.setSmallCircle()
     }
 
     private fun setUpBackLayout() {

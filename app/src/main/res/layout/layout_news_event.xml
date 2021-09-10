@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen5"
+    android:layout_marginVertical="@dimen/dimen5"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/dimen10">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dimen15"
+        android:paddingVertical="@dimen/dimen5">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dimen70"
+            android:layout_height="@dimen/dimen70">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/dimen70"
+                android:layout_height="@dimen/dimen70"
+                tools:src="@drawable/ic_event" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen10"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="@dimen/text14"
+                tools:ignore="SpUsage"
+                tools:text="Events" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen10"
+                android:textSize="@dimen/text14"
+                tools:ignore="SpUsage"
+                tools:text="Lorem ipsum dolor sit amet, consectetur" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dimen20"
+            android:layout_height="@dimen/dimen20"
+            android:src="@drawable/forward_arrow"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>

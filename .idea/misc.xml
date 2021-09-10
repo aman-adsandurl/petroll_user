@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1527777777777778" />
         <entry key="..\:/Users/DAY/.gradle/caches/transforms-2/files-2.1/90955d01cb10c5b5ad21be86c20ff149/jetified-meow-bottom-navigation-1.0.0/res/layout/meow_navigation_cell.xml" value="0.2907608695652174" />
         <entry key="..\:/Users/DAY/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_spinner_dropdown_item.xml" value="0.2966485507246377" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/drawable/app_circle.xml" value="0.2851851851851852" />
@@ -66,6 +67,33 @@
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_sold.xml" value="0.24139492753623187" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/layout/row_wishlist.xml" value="0.271286231884058" />
         <entry key="..\:/Users/DAY/Desktop/ads_n_url/Petroll_user/app/src/main/res/menu/navigation_menu.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_adoption.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/activity_community.xml" value="0.2109375" />
+        <entry key="app/src/main/res/layout/activity_find_help.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/activity_lost_found.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/activity_matings.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/activity_news_event.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/activity_post.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_post_incident.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/layout_app_top.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/layout_news_event.xml" value="0.3885416666666667" />
+        <entry key="app/src/main/res/layout/layout_post_action.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/layout_post_button.xml" value="0.14629629629629629" />
+        <entry key="app/src/main/res/layout/row_address.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_adoption.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/row_appointment.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_auction.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_chat.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_find_help.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/row_following.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_lost_found.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/row_mating.xml" value="0.3885416666666667" />
+        <entry key="app/src/main/res/layout/row_notification.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_order.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_post.xml" value="0.35185185185185186" />
+        <entry key="app/src/main/res/layout/row_post_incident.xml" value="0.37552083333333336" />
+        <entry key="app/src/main/res/layout/row_sold.xml" value="0.12892603850050657" />
+        <entry key="app/src/main/res/layout/row_wishlist.xml" value="0.12892603850050657" />
       </map>
     </option>
   </component>

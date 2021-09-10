@@ -56,6 +56,28 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
 
+        <activity android:name=".dashboard.community.services.PostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.community.services.MatingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+        <activity android:name=".dashboard.community.services.LostFoundActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+        <activity android:name=".dashboard.community.services.AdoptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+        <activity android:name=".dashboard.community.services.PostIncidentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+        <activity android:name=".dashboard.community.services.FindHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+        <activity android:name=".dashboard.community.services.NewsEventActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
     </application>
 
 </manifest>

@@ -101,4 +101,5 @@
     <string name="privacy">Privacy Policy</string>
     <string name="cancel_order">Cancel Order</string>
     <string name="track_order">Track Order</string>
+    <string name="follow">Follow</string>
 </resources>
