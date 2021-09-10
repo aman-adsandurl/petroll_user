@@ -36,7 +36,7 @@ class FollowingFragment(val isBlock: Boolean): Fragment() {
 
     private fun setUpBackLayout() {
         if (!isBlock) {
-            binding.back.tvBack.text = resources.getText(R.string.following)
+            binding.back.tvBack.text = resources.getText(R.string.following_title)
         } else {
             binding.back.tvBack.text = resources.getText(R.string.blocklist)
         }

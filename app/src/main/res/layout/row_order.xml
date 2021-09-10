@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/dimen10"
+    app:cardCornerRadius="@dimen/dimen10"
+    android:layout_margin="@dimen/dimen10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen5"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="@dimen/dimen10"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_auction_sample"
+                        android:layout_width="@dimen/dimen100"
+                        android:layout_height="@dimen/dimen100"/>
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/dimen12"
+                    android:textColor="@color/black"
+                    android:alpha="0.7"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_gravity="center"
+                    android:text="Order Id: PGHRJF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/dimen12"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:id="@+id/tv_bidder"
+                    android:text="Placed On: 12-sep"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textStyle="bold"
+                    android:text="North Paw Grain Free(Adult)"
+                    android:textSize="@dimen/dimen16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_old_price"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="AED 50.00"
+                        android:foreground="@drawable/strikethrough"
+                        android:textSize="@dimen/dimen14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="AED 34.00"
+                        android:layout_toEndOf="@+id/tv_old_price"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:textSize="@dimen/dimen14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_size"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Size 1Kg"
+                        android:alpha="0.5"
+                        android:textSize="@dimen/dimen14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_auction_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@+id/tv_size"
+                        android:alpha="0.5"
+                        android:layout_marginStart="@dimen/dimen20"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Qty: 1"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen14" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="invisible"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Allam"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/dimen16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_time_date"
+                        android:textColor="@color/blue_text"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="04h : 30m"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="@dimen/dimen16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_current_bid_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/cancel_order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen12" />
+
+                <TextView
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/dimen12"
+                    android:textColor="@color/indicator_highlight"
+                    android:layout_gravity="end"
+                    android:id="@+id/tv_bid_amount"
+                    android:text="@string/track_order"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

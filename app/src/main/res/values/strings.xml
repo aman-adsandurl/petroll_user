@@ -52,7 +52,8 @@
     <string name="chat">Chat</string>
     <string name="my_orders">My Orders</string>
     <string name="fav">My Favourites</string>
-    <string name="following">My\nFollowing</string>
+    <string name="following">My Following</string>
+    <string name="following_title">My\nFollowing</string>
     <string name="my_sold">My Sold Item</string>
     <string name="my_address">My Address</string>
     <string name="my_auction">My Auction</string>
@@ -94,4 +95,10 @@
     <string name="final_price">Final Bid</string>
     <string name="unfollow">Unfollow</string>
     <string name="unblock">Unblock</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="about_us">About Us</string>
+    <string name="terms">Terms and Conditions</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="track_order">Track Order</string>
 </resources>

@@ -8,15 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
-import com.petroll.dashboard.fragments.HomeFragment
-import com.petroll.dashboard.fragments.NotificationFragment
-import com.petroll.dashboard.fragments.ProfileDashboardFragment
-import com.petroll.databinding.ActivityBaseBinding
-
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 import com.petroll.Navigation.fragments.*
 import com.petroll.R
+import com.petroll.dashboard.fragments.HomeFragment
+import com.petroll.dashboard.fragments.NotificationFragment
+import com.petroll.dashboard.fragments.ProfileDashboardFragment
+import com.petroll.databinding.ActivityBaseBinding
 
 
 open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
@@ -36,7 +35,7 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         baseBind = ActivityBaseBinding.inflate(layoutInflater)
         super.setContentView(baseBind.root)
         setUpBottomNav()
-        setFragment(HomeFragment())
+        setFragment(HomeFragment(), true)
         setUpFragmentsBottomBar()
         setNavigationViewListener()
     }
@@ -85,15 +84,16 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
     // bottom bar
     private fun setUpFragmentsBottomBar() {
         baseBind.bottmNav.setOnClickMenuListener {
-            when(it.id) {
-                HOME -> setFragment(HomeFragment())
-                NOTIFICATION -> setFragment(NotificationFragment())
-                PROFILE -> setFragment(ProfileDashboardFragment())
+            when (it.id) {
+                HOME -> setFragment(HomeFragment(), true)
+                NOTIFICATION -> setFragment(NotificationFragment(), true)
+                PROFILE -> setFragment(ProfileDashboardFragment(), true)
             }
         }
     }
 
-    private fun setFragment(fragment: Fragment) {
+    private fun setFragment(fragment: Fragment, isHome: Boolean) {
+        setUpBottomClickedView(isHome)
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
         transaction.replace(R.id.content, fragment)
@@ -101,7 +101,7 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
     }
 
     fun onHome() {
-        setFragment(HomeFragment())
+        setFragment(HomeFragment(), true)
         baseBind.bottmNav.show(HOME)
     }
 
@@ -142,13 +142,17 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.nav_wishlist -> setFragment(WishlistFragment())
-            R.id.nav_following -> setFragment(FollowingFragment(false))
-            R.id.nav_sold -> setFragment(SoldFragment())
-            R.id.nav_address -> setFragment(AddAddressFragment())
-            R.id.nav_auction -> setFragment(AuctionFragment())
-            R.id.nav_blocklist -> setFragment(FollowingFragment(true))
+        when (item.itemId) {
+            R.id.nav_wishlist -> setFragment(WishlistFragment(), false)
+            R.id.nav_following -> setFragment(FollowingFragment(false), false)
+            R.id.nav_sold -> setFragment(SoldFragment(), false)
+            R.id.nav_address -> setFragment(AddAddressFragment(), false)
+            R.id.nav_auction -> setFragment(AuctionFragment(true), false)
+            R.id.nav_blocklist -> setFragment(FollowingFragment(true), false)
+            R.id.nav_appnt -> setFragment(AuctionFragment(false), false)
+            R.id.nav_setting -> setFragment(SettingsFragment(), false)
+            R.id.nav_order -> setFragment(OrdersFragment(), false)
+            R.id.nav_chat -> setFragment(ChatFragment(), false)
         }
         baseBind.drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -69,6 +69,7 @@ class AuctionFragment(val isAuction: Boolean) : Fragment() {
         if (isAuction) {
             binding.back.tvBack.text = resources.getText(R.string.auction)
         } else {
+            // todo for appointments increase the circle size
             binding.back.tvBack.text = resources.getText(R.string.appointment)
         }
         binding.back.backLayout.setOnClickListener {
