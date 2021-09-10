@@ -1,10 +1,13 @@
 package com.petroll.dashboard.service
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
 import com.petroll.R
+import com.petroll.dashboard.service.servicepackage.PeerActivity
+import com.petroll.dashboard.service.servicepackage.VertinaryActivity
 import com.petroll.databinding.ActivityServiceBinding
 import com.petroll.utils.BaseActivity
 
@@ -78,6 +81,35 @@ class ServiceActivity : BaseActivity() {
             TypedValue.COMPLEX_UNIT_PX,
             resources.getDimension(R.dimen.dimen14)
         )
+
+        binding.vetLayout.setOnClickListener {
+            val intent = Intent(this, VertinaryActivity::class.java)
+            intent.putExtra("name", resources.getText(R.string.buy))
+            startActivity(intent)
+        }
+
+        binding.trainerLayout.setOnClickListener {
+            val intent = Intent(this, VertinaryActivity::class.java)
+            intent.putExtra("name", resources.getText(R.string.trainer))
+            startActivity(intent)
+        }
+
+        binding.spaLayout.setOnClickListener {
+            val intent = Intent(this, VertinaryActivity::class.java)
+            intent.putExtra("name", resources.getText(R.string.spa_and_body))
+            startActivity(intent)
+        }
+
+        binding.consultantLayout.setOnClickListener {
+            val intent = Intent(this, VertinaryActivity::class.java)
+            intent.putExtra("name", resources.getText(R.string.consultant))
+            startActivity(intent)
+        }
+
+        binding.peerLayout.setOnClickListener {
+            val intent = Intent(this, PeerActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

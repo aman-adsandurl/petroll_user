@@ -1,4 +1,4 @@
-package com.petroll.dashboard.market
+package com.petroll.dashboard.service.servicepackage
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,16 +8,17 @@ import com.petroll.R
 import com.petroll.dashboard.market.marketpackage.AuctionActivity
 import com.petroll.dashboard.market.marketpackage.BuyActivity
 import com.petroll.dashboard.market.marketpackage.ShopActivity
-import com.petroll.databinding.ActivityMarketBinding
+import com.petroll.databinding.ActivityBuyBinding
+import com.petroll.databinding.ActivityPeerBinding
 import com.petroll.utils.BaseActivity
 
-class MarketActivity : BaseActivity() {
+class PeerActivity: BaseActivity() {
 
-    lateinit var binding: ActivityMarketBinding
+    lateinit var binding: ActivityPeerBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMarketBinding.inflate(layoutInflater)
+        binding = ActivityPeerBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpBackLayout()
         hideContent()
@@ -40,9 +41,9 @@ class MarketActivity : BaseActivity() {
         binding.sellLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.ligh_greyish))
         binding.auctionLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.lighter_yellow))
 
-        binding.shopLayout.setImageText(resources.getString(R.string.shop), R.drawable.ic_shop)
-        binding.sellLayout.setImageText(resources.getString(R.string.buy_sell), R.drawable.ic_sell)
-        binding.auctionLayout.setImageText(resources.getString(R.string.auction), R.drawable.ic_auction_market)
+        binding.shopLayout.setImageText(resources.getString(R.string.pet_walk), R.drawable.ic_walk)
+        binding.sellLayout.setImageText(resources.getString(R.string.pet_taxi), R.drawable.ic_taxi)
+        binding.auctionLayout.setImageText(resources.getString(R.string.pet_boarding), R.drawable.ic_boarding)
 
         binding.shopLayout.setTextColorLayout(AppCompatResources.getColorStateList(this, R.color.black))
         binding.sellLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
@@ -78,9 +79,10 @@ class MarketActivity : BaseActivity() {
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.market)
+        binding.back.tvBack.text = resources.getText(R.string.peer)
         binding.back.backLayout.setOnClickListener {
             finish()
         }
     }
+
 }

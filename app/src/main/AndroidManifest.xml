@@ -78,6 +78,25 @@
         <activity android:name=".dashboard.community.services.NewsEventActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
+        <activity android:name=".dashboard.market.marketpackage.ShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.market.marketpackage.BuyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.market.marketpackage.AuctionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.service.servicepackage.VertinaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.service.servicepackage.PeerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
     </application>
 
 </manifest>
