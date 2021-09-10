@@ -66,7 +66,7 @@
     <string name="trainer">Trainer</string>
     <string name="peer">Peer to Peer</string>
     <string name="spa_and_body"><![CDATA[Spa & Body]]></string>
-    <string name="consultant">Comsultant</string>
+    <string name="consultant">Consultant</string>
     <string name="post">Post</string>
     <string name="mating">Matings</string>
     <string name="lost_found"><![CDATA[Lost & Found]]></string>
@@ -101,4 +101,15 @@
     <string name="privacy">Privacy Policy</string>
     <string name="cancel_order">Cancel Order</string>
     <string name="track_order">Track Order</string>
+    <string name="shops_top">Shops</string>
+    <string name="buy">Buy</string>
+    <string name="food">Food</string>
+    <string name="accesories">Accesories</string>
+    <string name="toys">Toys</string>
+    <string name="clothing">Clothing</string>
+    <string name="health_supply">Health Supply</string>
+    <string name="grooming">Grooming</string>
+    <string name="pet_walk">Pet\nWalk</string>
+    <string name="pet_taxi">Pet\nTaxi</string>
+    <string name="pet_boarding">Pet\nBoarding</string>
 </resources>

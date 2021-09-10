@@ -5,11 +5,11 @@ import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.petroll.R
-import com.petroll.baseclasses.BaseActivity
 import com.petroll.databinding.ActivityLandingPageBinding
 
-class LandingPageActivity : BaseActivity() {
+class LandingPageActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLandingPageBinding
 

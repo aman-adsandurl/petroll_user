@@ -65,4 +65,6 @@ dependencies {
 
     implementation 'com.etebarian:meow-bottom-navigation:1.2.0'
 
+    implementation 'com.github.jakebonk:ChipView:1.0.1'
+
 }

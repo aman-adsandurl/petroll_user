@@ -1,9 +1,13 @@
 package com.petroll.dashboard.market
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
 import androidx.appcompat.content.res.AppCompatResources
 import com.petroll.R
+import com.petroll.dashboard.market.marketpackage.AuctionActivity
+import com.petroll.dashboard.market.marketpackage.BuyActivity
+import com.petroll.dashboard.market.marketpackage.ShopActivity
 import com.petroll.databinding.ActivityMarketBinding
 import com.petroll.utils.BaseActivity
 
@@ -57,6 +61,20 @@ class MarketActivity : BaseActivity() {
             resources.getDimension(R.dimen.dimen14)
         )
 
+        binding.shopLayout.setOnClickListener {
+            val intent = Intent(this, ShopActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.sellLayout.setOnClickListener {
+            val intent = Intent(this, BuyActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.auctionLayout.setOnClickListener {
+            val intent = Intent(this, AuctionActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setUpBackLayout() {

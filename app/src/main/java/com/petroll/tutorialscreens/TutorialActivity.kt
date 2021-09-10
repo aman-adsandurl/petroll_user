@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.petroll.databinding.ActivityTutorialBinding
-import com.petroll.onboarding.LandingPageActivity
+import com.petroll.onboarding.LoginActivity
 import com.petroll.tutorialscreens.fragments.TutorialScreenFragment
 
 class TutorialActivity : AppCompatActivity() {
@@ -59,7 +59,7 @@ class TutorialActivity : AppCompatActivity() {
             Log.e("anim", "------ > " + binding.slider.currentItem.toString());
             if (binding.slider.currentItem == (NUM_PAGES - 1)) {
                 // todo intent to call sigin activity
-                val intent = Intent(this, LandingPageActivity::class.java)
+                val intent = Intent(this, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
@@ -70,7 +70,7 @@ class TutorialActivity : AppCompatActivity() {
         }
 
         binding.rlSkip.setOnClickListener {
-            val intent = Intent(this, LandingPageActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
