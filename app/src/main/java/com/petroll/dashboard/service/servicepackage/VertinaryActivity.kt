@@ -65,7 +65,7 @@ class VertinaryActivity: BaseActivity() {
 
     private fun setUpRecyclerView() {
         binding.rvVertinary.layoutManager = LinearLayoutManager(this)
-        val adapter = AppointmentAdapter(data, this)
+        val adapter = AppointmentAdapter(data)
         binding.rvVertinary.adapter = adapter
     }
 
