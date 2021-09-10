@@ -93,7 +93,8 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
     }
 
     private fun setFragment(fragment: Fragment, isHome: Boolean) {
-        setUpBottomClickedView(isHome)
+        showBottomBar()
+//        setUpBottomClickedView(isHome)
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
         transaction.replace(R.id.content, fragment)
