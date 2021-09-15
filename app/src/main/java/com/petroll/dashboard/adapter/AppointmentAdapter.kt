@@ -1,6 +1,5 @@
 package com.petroll.dashboard.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.petroll.R
 
-class AppointmentAdapter(private val mList: List<String>, private val context: Context) :
+class AppointmentAdapter(private val mList: List<String>) :
     RecyclerView.Adapter<AppointmentAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,

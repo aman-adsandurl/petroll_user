@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/dimen15"
+    android:layout_marginVertical="@dimen/dimen10"
+    android:elevation="@dimen/dimen10"
+    app:cardCornerRadius="@dimen/dimen20">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen15"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/dimen30"
+                android:layout_height="@dimen/dimen30"
+                app:cardBackgroundColor="@color/blue_text"
+                app:cardCornerRadius="250dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="250dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/dimen25"
+                        android:layout_height="@dimen/dimen25"
+                        android:contentDescription="userProfilePhoto"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_demo_image"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Vikram Singh"
+                    android:textSize="@dimen/text16"
+                    tools:ignore="SpUsage" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="25m ago"
+                    android:textColor="@color/hint"
+                    android:textSize="@dimen/text12"
+                    tools:ignore="SpUsage" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/follow"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text10"
+                    tools:ignore="SpUsage" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:layout_marginEnd="@dimen/dimen10"
+                    android:src="@drawable/ic_unfollow" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimen20"
+                android:layout_height="@dimen/dimen20"
+                android:src="@drawable/ic_overflow_menu" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Lorem ipsum dolor sit?" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum asuspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis...see more" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.petroll.utils.PostActionView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon_drawable="@drawable/ic_comment"
+                app:text="111" />
+
+            <com.petroll.utils.PostActionView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon_drawable="@drawable/ic_like_post"
+                app:text="111" />
+
+            <com.petroll.utils.PostActionView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                app:icon_drawable="@drawable/ic_share_post" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/hint"
+                android:text="199 Views"
+                android:textSize="@dimen/text12" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.cardview.widget.CardView>
