@@ -38,8 +38,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dimen160"
-                    android:layout_marginTop="@dimen/dimen20">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10">
 
                     <com.petroll.utils.ServiceLayout
                         android:id="@+id/post_layout"
@@ -67,8 +67,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dimen160"
-                    android:layout_marginTop="@dimen/dimen20">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10">
 
                     <com.petroll.utils.ServiceLayout
                         android:id="@+id/adoption_layout"
@@ -96,8 +96,8 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dimen160"
-                    android:layout_marginTop="@dimen/dimen20">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10">
 
                     <com.petroll.utils.ServiceLayout
                         android:id="@+id/news_layout"
