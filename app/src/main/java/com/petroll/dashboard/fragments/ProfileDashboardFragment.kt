@@ -8,8 +8,9 @@ import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.fragment.app.Fragment
 import com.petroll.R
-import com.petroll.dashboard.DashboardActivity
+
 import com.petroll.databinding.FragmentProfileDashboardBinding
+import com.petroll.utils.BaseActivity
 
 class ProfileDashboardFragment : Fragment() {
 
@@ -70,7 +71,7 @@ class ProfileDashboardFragment : Fragment() {
     private fun setUpBackLayout() {
         binding.back.tvBack.text = resources.getText(R.string.profile)
         binding.back.backLayout.setOnClickListener {
-            (activity as DashboardActivity).onHome()
+            (activity as BaseActivity).onHome()
         }
     }
 }

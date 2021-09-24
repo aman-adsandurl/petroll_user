@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
-import com.petroll.dashboard.DashboardActivity
+import com.petroll.utils.BaseActivity
 import com.petroll.dashboard.adapter.FollowingAdapter
 import com.petroll.dashboard.adapter.SoldAdapter
 import com.petroll.databinding.FragmentFollowingBinding
@@ -37,7 +37,7 @@ class SoldFragment: Fragment() {
     private fun setUpBackLayout() {
         binding.back.tvBack.text = resources.getText(R.string.product)
         binding.back.backLayout.setOnClickListener {
-            (activity as DashboardActivity).onHome()
+            (activity as BaseActivity).onHome()
         }
     }
 

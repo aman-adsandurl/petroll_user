@@ -40,5 +40,11 @@
 
     <color name="blue_text">#0096D1</color>
     <color name="light_grey">#F6F6F6</color>
+    <color name="light_grey1">#FEDBED</color>
+    <color name="yellow4">#F8DBB0</color>
+    <color name="green5">#B2ECAC</color>
+    <color name="product_bg">#F1F2F4</color>
+
+    <color name="detail_bg">#00000030</color>
 
 </resources>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dimen10"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -11,17 +12,10 @@
         android:layout_width="@dimen/dimen100"
         android:layout_height="@dimen/dimen100"/>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        app:cardElevation="@dimen/dimen10"
-        app:cardCornerRadius="@dimen/dimen20"
-        android:layout_margin="@dimen/dimen10"
-        app:cardBackgroundColor="@color/light_grey"
-        android:layout_height="wrap_content">
-
         <RelativeLayout
             android:padding="@dimen/dimen5"
             android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen10"
             android:layout_height="match_parent">
         <TextView
             android:id="@+id/tv_name"
@@ -34,16 +28,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-            <TextView
-                android:layout_below="@+id/tv_name"
-                android:text="22 Iron Gate, Dubai"
-                android:textSize="@dimen/text12"
-                android:gravity="center"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                app:cardElevation="@dimen/dimen5"
+                app:cardCornerRadius="@dimen/dimen20"
+                android:layout_margin="@dimen/dimen10"
+                android:layout_below="@+id/tv_name"
+                app:cardBackgroundColor="@color/light_grey"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="22 Iron Gate, Dubai"
+                android:textSize="@dimen/text12" />
+
+            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+<!--    </androidx.cardview.widget.CardView>-->
 
 <!--    <androidx.cardview.widget.CardView-->
 <!--        android:layout_width="match_parent"-->

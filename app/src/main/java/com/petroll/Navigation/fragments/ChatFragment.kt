@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
-import com.petroll.dashboard.DashboardActivity
+import com.petroll.utils.BaseActivity
 import com.petroll.dashboard.adapter.ChatAdapter
 import com.petroll.databinding.FragmentChatBinding
 import com.petroll.databinding.FragmentFollowingBinding
@@ -37,7 +37,7 @@ class ChatFragment : Fragment() {
 
         binding.back.tvBack.text = resources.getText(R.string.chat)
         binding.back.backLayout.setOnClickListener {
-            (activity as DashboardActivity).onHome()
+            (activity as BaseActivity).onHome()
         }
     }
 }

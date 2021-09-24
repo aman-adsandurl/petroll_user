@@ -15,15 +15,25 @@ class VertinaryActivity: BaseActivity() {
 
     lateinit var binding: ActivityVertinaryBinding
 
+    private lateinit var extras: Bundle
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityVertinaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        extras = intent.extras!!
         setUpBackLayout()
         hideContent()
         setUpData("ongoing")
         setUpClickListener()
         setUpRecyclerView()
+        setUpFragmentsBottomBar()
+        if (extras.getString("name")?.equals(resources.getText(R.string.spa_and_body)) == false) {
+            hideBottomBar("Ask " +extras.getString("name"))
+        } else {
+            hideBottomBar("Find Spa")
+        }
+
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }
@@ -71,11 +81,10 @@ class VertinaryActivity: BaseActivity() {
 
 
     private fun setUpBackLayout() {
-        val extras = intent.extras
-
-        binding.back.tvBack.text = extras!!.getString("name")
+        binding.back.tvBack.text = extras.getString("name")
         binding.back.backLayout.setOnClickListener {
             finish()
+            showBottomBar()
         }
     }
 }

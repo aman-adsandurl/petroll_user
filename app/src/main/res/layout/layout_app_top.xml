@@ -18,32 +18,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen10"
-        android:layout_marginStart="@dimen/dimen10">
+        android:layout_marginStart="@dimen/dimen5">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dimen10"
+            android:layout_marginStart="@dimen/dimen5"
             android:layout_marginEnd="@dimen/dimen10"
             android:layout_toEndOf="@+id/rl_back_icon"
             android:fontFamily="@font/poppins_medium"
             android:text="@string/back"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="@dimen/text14" />
+            android:textSize="@dimen/text16" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/rl_back_icon"
             android:layout_width="wrap_content"
             app:cardBackgroundColor="@color/black"
             app:cardCornerRadius="@dimen/dimen5"
-            android:layout_marginStart="@dimen/dimen10"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="@dimen/dimen10"
-                android:layout_margin="@dimen/dimen5"
+                android:layout_margin="@dimen/dimen8"
                 android:src="@drawable/back"
                 android:tint="@color/white"
                 android:rotation="90"

@@ -97,6 +97,20 @@
         <activity android:name=".dashboard.service.servicepackage.PeerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.market.marketpackage.detail.ShopDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.market.marketpackage.detail.ProductListingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.market.marketpackage.detail.ProductDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+
     </application>
 
 </manifest>

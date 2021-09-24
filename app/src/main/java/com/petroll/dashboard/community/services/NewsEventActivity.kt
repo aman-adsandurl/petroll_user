@@ -20,12 +20,13 @@ class NewsEventActivity: BaseActivity() {
         setContentView(binding.root)
         setUpBackLayout()
         hideContent()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.news_event)
+        binding.back.tvBack.text = resources.getText(R.string.news_event_top)
         binding.back.backLayout.setOnClickListener {
             finish()
         }

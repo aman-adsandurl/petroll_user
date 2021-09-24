@@ -18,6 +18,7 @@ class PostActivity: BaseActivity() {
         setUpBackLayout()
         hideContent()
         setUpRecyclerView()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }

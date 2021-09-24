@@ -22,6 +22,7 @@ class ServiceActivity : BaseActivity() {
         setUpBackLayout()
         hideContent()
         setUpIconLayout()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }
@@ -84,7 +85,7 @@ class ServiceActivity : BaseActivity() {
 
         binding.vetLayout.setOnClickListener {
             val intent = Intent(this, VertinaryActivity::class.java)
-            intent.putExtra("name", resources.getText(R.string.buy))
+            intent.putExtra("name", resources.getText(R.string.vet))
             startActivity(intent)
         }
 

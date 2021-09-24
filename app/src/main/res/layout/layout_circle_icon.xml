@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/dimen40"
+    android:layout_width="@dimen/dimen30"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/small_circle"
     android:id="@+id/rl_small_icon"
-    android:layout_height="@dimen/dimen40">
+    android:layout_height="@dimen/dimen30">
 
     <ImageView
         android:id="@+id/iv_icons"
-        android:layout_width="@dimen/dimen15"
+        android:layout_width="@dimen/dimen10"
         android:layout_centerInParent="true"
         tools:src="@drawable/ic_fav_top"
-        android:layout_height="@dimen/dimen20"/>
+        android:layout_height="@dimen/dimen15"/>
 
 </RelativeLayout>

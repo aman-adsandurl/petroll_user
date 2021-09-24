@@ -40,9 +40,9 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         setNavigationViewListener()
     }
 
-    fun hideBottomBar() {
+    fun hideBottomBar(buttonText: String) {
         baseBind.rlNext.visibility = View.VISIBLE
-        baseBind.tvButton.text = resources.getString(R.string.add_new_address)
+        baseBind.tvButton.text = buttonText
         baseBind.bottmNav.visibility = View.GONE
     }
 
@@ -82,7 +82,7 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
     }
 
     // bottom bar
-    private fun setUpFragmentsBottomBar() {
+    protected fun setUpFragmentsBottomBar() {
         baseBind.bottmNav.setOnClickMenuListener {
             when (it.id) {
                 HOME -> setFragment(HomeFragment(), true)
@@ -94,7 +94,7 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
 
     private fun setFragment(fragment: Fragment, isHome: Boolean) {
         showBottomBar()
-//        setUpBottomClickedView(isHome)
+        showContent()
         val fm = supportFragmentManager
         val transaction = fm.beginTransaction()
         transaction.replace(R.id.content, fragment)
@@ -122,12 +122,7 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         baseBind.bottmNav.add(MeowBottomNavigation.Model(HOME, R.drawable.ic_botm_home))
         baseBind.bottmNav.add(MeowBottomNavigation.Model(FAV, R.drawable.ic_suggestion))
         baseBind.bottmNav.add(MeowBottomNavigation.Model(FEED, R.drawable.ic_inact_feeds))
-        baseBind.bottmNav.add(
-            MeowBottomNavigation.Model(
-                NOTIFICATION,
-                R.drawable.ic_inact_notification
-            )
-        )
+        baseBind.bottmNav.add(MeowBottomNavigation.Model(NOTIFICATION, R.drawable.ic_inact_notification))
         baseBind.bottmNav.add(MeowBottomNavigation.Model(PROFILE, R.drawable.ic_inact_profile))
     }
 

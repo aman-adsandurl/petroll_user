@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
-import com.petroll.dashboard.DashboardActivity
+import com.petroll.utils.BaseActivity
 import com.petroll.dashboard.adapter.AppointmentAdapter
 import com.petroll.dashboard.adapter.AuctionAdapter
 import com.petroll.databinding.FragmentAuctionBinding
@@ -73,7 +73,7 @@ class AuctionFragment(val isAuction: Boolean) : Fragment() {
             binding.back.tvBack.text = resources.getText(R.string.appointment)
         }
         binding.back.backLayout.setOnClickListener {
-            (activity as DashboardActivity).onHome()
+            (activity as BaseActivity).onHome()
         }
     }
 

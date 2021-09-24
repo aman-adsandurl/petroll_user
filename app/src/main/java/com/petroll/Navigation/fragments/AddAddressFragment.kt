@@ -26,7 +26,7 @@ class AddAddressFragment: Fragment() {
         binding = FragmentFollowingBinding.inflate(layoutInflater)
         setUpRecyclerView()
         setUpBackLayout()
-        (activity as BaseActivity).hideBottomBar()
+        (activity as BaseActivity).hideBottomBar(resources.getString(R.string.add_new_address))
         return binding.root
     }
 
@@ -39,7 +39,7 @@ class AddAddressFragment: Fragment() {
     private fun setUpBackLayout() {
         binding.back.tvBack.text = resources.getText(R.string.select_address)
         binding.back.backLayout.setOnClickListener {
-            (activity as DashboardActivity).onHome()
+            (activity as BaseActivity).onHome()
             (activity as BaseActivity).showBottomBar()
         }
     }

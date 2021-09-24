@@ -25,6 +25,7 @@ class AuctionActivity : BaseActivity() {
         hideContent()
         setUpData("ongoing")
         setUpRecyclerView()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }

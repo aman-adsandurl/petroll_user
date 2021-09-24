@@ -3,9 +3,7 @@ package com.petroll.dashboard.market.marketpackage
 import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
-import com.petroll.dashboard.adapter.OrderAdapter
 import com.petroll.dashboard.adapter.ShopAdapter
 import com.petroll.databinding.ActivityShopBinding
 import com.petroll.utils.BaseActivity
@@ -21,12 +19,13 @@ class ShopActivity : BaseActivity() {
         setUpBackLayout()
         hideContent()
         setUpRecyclerView()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.buy)
+        binding.back.tvBack.text = resources.getText(R.string.shop)
         binding.back.backLayout.setOnClickListener {
             finish()
         }
@@ -39,7 +38,7 @@ class ShopActivity : BaseActivity() {
 
 
         binding.rvShop.layoutManager = GridLayoutManager(this, 2)
-        val adapter = ShopAdapter()
+        val adapter = ShopAdapter(this@ShopActivity)
         binding.rvShop.adapter = adapter
     }
 }

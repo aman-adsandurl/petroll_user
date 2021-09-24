@@ -11,6 +11,7 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,13 +30,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/dimen20"
+                    android:layout_marginTop="@dimen/dimen10"
                     app:dotsColor="@color/indicator_not_active"
                     app:dotsCornerRadius="@dimen/dimen8"
                     app:dotsSize="@dimen/dimen16"
                     app:dotsSpacing="@dimen/dimen4"
                     app:dotsWidthFactor="2.5"
-                    app:progressMode="true"
+                    app:progressMode="false"
                     app:selectedDotColor="@color/indicator_highlight" />
 
                 <LinearLayout

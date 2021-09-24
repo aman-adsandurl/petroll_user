@@ -22,6 +22,7 @@ class MarketActivity : BaseActivity() {
         setUpBackLayout()
         hideContent()
         setUpIconLayout()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }
@@ -35,6 +36,7 @@ class MarketActivity : BaseActivity() {
         binding.shopLayout.setSmallCircle()
         binding.sellLayout.setSmallCircle()
         binding.auctionLayout.setSmallCircle()
+
 
         binding.shopLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.light_yellow))
         binding.sellLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.ligh_greyish))

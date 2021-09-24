@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
-import com.petroll.dashboard.DashboardActivity
+import com.petroll.utils.BaseActivity
 import com.petroll.dashboard.adapter.FollowingAdapter
 import com.petroll.dashboard.adapter.WishlistAdapter
 import com.petroll.databinding.FragmentAppointmentBinding
@@ -41,7 +41,7 @@ class FollowingFragment(val isBlock: Boolean): Fragment() {
             binding.back.tvBack.text = resources.getText(R.string.blocklist)
         }
         binding.back.backLayout.setOnClickListener {
-            (activity as DashboardActivity).onHome()
+            (activity as BaseActivity).onHome()
         }
     }
 

@@ -75,6 +75,7 @@
     <string name="find_help">Find Help</string>
     <string name="guide">Guide</string>
     <string name="news_event"><![CDATA[News \n & Event]]></string>
+    <string name="news_event_top"><![CDATA[News & Event]]></string>
     <string name="notification">Notifications</string>
     <string name="profile">Profile</string>
     <string name="my_pet">My Pets</string>
@@ -113,4 +114,17 @@
     <string name="pet_walk">Pet\nWalk</string>
     <string name="pet_taxi">Pet\nTaxi</string>
     <string name="pet_boarding">Pet\nBoarding</string>
+    <string name="vertinary">Veterinary</string>
+    <string name="hello_pet">Hello Pet</string>
+    <string name="delivery_here">Delivery Available</string>
+    <string name="unfollow_text">Delivery Schedule Allowance</string>
+    <string name="dog">Dog</string>
+    <string name="cat">Cats</string>
+    <string name="bird">Birds</string>
+    <string name="rabbits">Rabbits</string>
+    <string name="fish">Fish</string>
+    <string name="pets">Pets</string>
+    <string name="medicine">Medicine</string>
+    <string name="bed">Bed</string>
+    <string name="homes">Homes</string>
 </resources>

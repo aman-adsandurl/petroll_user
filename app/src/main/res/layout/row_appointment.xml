@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="Allie"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="@dimen/dimen16"/>
 
@@ -48,6 +49,7 @@
                 android:text="Trainer"
                 android:layout_marginTop="@dimen/dimen10"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="@dimen/dimen16"/>
 
@@ -57,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:text="Dr. Sharif Nawaz"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="@dimen/dimen16"/>
 
@@ -66,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:text="Date: 25 Sep 2021 | Time: 4:30PM"
                 android:alpha="0.6"
+                android:textColor="@color/black"
                 android:fontFamily="@font/poppins_regular"
                 android:textSize="@dimen/dimen14"/>
 

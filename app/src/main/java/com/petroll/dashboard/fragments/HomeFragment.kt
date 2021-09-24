@@ -115,6 +115,8 @@ class HomeFragment : Fragment() {
          * interval of 3 seconds.
          */
         binding.vpTop.autoScroll(3000)
+
+        binding.dotsIndicator.setViewPager(binding.vpTop)
     }
 
     fun ViewPager.autoScroll(interval: Long) {

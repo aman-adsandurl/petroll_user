@@ -23,6 +23,7 @@ class PeerActivity: BaseActivity() {
         setUpBackLayout()
         hideContent()
         setUpIconLayout()
+        setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
     }

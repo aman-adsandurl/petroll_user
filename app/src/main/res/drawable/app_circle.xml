@@ -10,6 +10,7 @@
     <!--        android:height="145dp"/>-->
 
     <size
-        android:width="175dp"
-        android:height="150dp"/>
+        android:height="130dp"
+        android:width="220dp"
+        />
 </shape>

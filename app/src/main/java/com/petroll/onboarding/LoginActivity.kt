@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.petroll.dashboard.DashboardActivity
+import com.petroll.utils.BaseActivity
 import com.petroll.databinding.ActivityLoginBinding
 
 class LoginActivity: AppCompatActivity() {

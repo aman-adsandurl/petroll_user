@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/back"
+            layout="@layout/layout_app_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl_viewpager"
+        android:layout_marginTop="@dimen/dimen10"
+        android:background="@color/overlay_bg"
+        android:layout_height="wrap_content">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen10"
+            app:dotsColor="@color/indicator_not_active"
+            app:dotsCornerRadius="@dimen/dimen8"
+            app:dotsSize="@dimen/dimen16"
+            android:layout_below="@+id/vp"
+            app:dotsSpacing="@dimen/dimen4"
+            android:layout_marginBottom="@dimen/dimen20"
+            android:layout_centerHorizontal="true"
+            app:dotsWidthFactor="2.5"
+            app:progressMode="false"
+            app:selectedDotColor="@color/indicator_highlight" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/dimen10"
+        app:cardElevation="@dimen/dimen5"
+        android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:layout_marginTop="-20dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:text="North paw grain free (Adult) 2KG"
+            android:fontFamily="@font/poppins_regular"
+            android:textStyle="bold"
+            android:textSize="@dimen/text16"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="@dimen/dimen10">
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:id="@+id/tv_strike_price"
+               android:text="AED 50.00"
+               android:background="@drawable/strikethrough"
+               android:textColor="@color/black"
+               android:fontFamily="@font/poppins_regular"
+               android:layout_height="wrap_content"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:layout_width="wrap_content"
+               android:layout_toEndOf="@+id/tv_strike_price"
+               android:text="AED 34.00"
+               android:textStyle="bold"
+               android:layout_marginStart="@dimen/dimen5"
+               android:textColor="@color/black"
+               android:fontFamily="@font/poppins_regular"
+               android:layout_height="wrap_content"/>
+       </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
