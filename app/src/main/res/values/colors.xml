@@ -46,5 +46,8 @@
     <color name="product_bg">#F1F2F4</color>
 
     <color name="detail_bg">#00000030</color>
+    <color name="green">#158F19</color>
 
+    <color name="line_color">#7C7F87</color>
+    <color name="top_text_color">#777777</color>
 </resources>

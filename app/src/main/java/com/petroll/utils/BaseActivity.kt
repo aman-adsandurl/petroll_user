@@ -1,5 +1,6 @@
 package com.petroll.utils
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -44,6 +45,16 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         baseBind.rlNext.visibility = View.VISIBLE
         baseBind.tvButton.text = buttonText
         baseBind.bottmNav.visibility = View.GONE
+    }
+
+    fun setBottomBarText(buttonText: String) {
+        baseBind.tvButton.text = buttonText
+    }
+
+    fun nextClickListener(intent: Intent) {
+        baseBind.rlNext.setOnClickListener {
+            startActivity(intent)
+        }
     }
 
     fun showBottomBar() {

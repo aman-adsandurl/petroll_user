@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cart"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_payment"
+        android:layout_below="@id/vp_fragments"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dimen10"
+        android:layout_margin="@dimen/dimen15"
+        app:cardElevation="@dimen/dimen5"
+        app:cardBackgroundColor="@color/white"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen10"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/text16"
+                android:text="Price Details (3 Items)"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Bag Total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="AED 999"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Bag Discount"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="-AED 999"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Coupon Discount"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/indicator_highlight"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Apply Coupon"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Order Total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/indicator_highlight"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="AED 399"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Vat"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text14"
+                    android:textColor="@color/indicator_highlight"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="AED 120"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_marginTop="@dimen/dimen10"
+                android:background="@color/black"
+                android:alpha="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dimen20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text16"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Total"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text16"
+                    android:textColor="@color/indicator_highlight"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="AED 136"
+                    android:textStyle="bold"
+                    android:textColorHighlight="@color/black"
+                    android:layout_alignParentEnd="true"
+                    android:layout_height="wrap_content"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</ScrollView>

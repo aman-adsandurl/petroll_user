@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/dimen10"
+    app:cardBackgroundColor="@color/white"
+    app:cardElevation="@dimen/dimen10"
+    android:layout_margin="@dimen/dimen10"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen10"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/dimen50"
+            android:src="@drawable/ic_address_new"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/dimen50"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:layout_marginStart="@dimen/dimen10"
+            android:layout_marginEnd="@dimen/dimen40"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:text="Shaileh"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:text="535A Shipra City, Dubai"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:text="Mobile: 9891979237"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_check"
+            android:layout_width="@dimen/dimen50"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/dimen50">
+
+            <ImageView
+                android:layout_width="@dimen/dimen20"
+                android:src="@drawable/uncheck_address"
+                android:layout_centerInParent="true"
+                android:id="@+id/iv_uncheck"
+                android:layout_height="@dimen/dimen20"/>
+
+                <ImageView
+                    android:src="@drawable/check_address"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/iv_check"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/dimen20"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

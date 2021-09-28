@@ -127,4 +127,17 @@
     <string name="medicine">Medicine</string>
     <string name="bed">Bed</string>
     <string name="homes">Homes</string>
+    <string name="benefits">Benefits</string>
+    <string name="rating_review">Ratings and Reviews</string>
+    <string name="add_cart">Add to Cart</string>
+    <string name="product_detail">Product \n Detail</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="bag">Bag</string>
+    <string name="address">Address</string>
+    <string name="payment">Payment</string>
+    <string name="your_cart">Your Cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="place_order">Place Order</string>
+    <string name="shipping">Shipping To</string>
+    <string name="add_new">+ Add New</string>
 </resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="@dimen/dimen10"
+    android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/indicator_highlight" />
+
+    <ImageView
+        android:src="@drawable/ic_check"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dimen10"
+        android:layout_height="@dimen/dimen10"/>
+
+    <TextView
+        android:id="@+id/tv_bag"
+        android:text="@string/bag"
+        android:layout_gravity="center"
+        android:textColor="@color/indicator_highlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="50dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:layout_marginStart="@dimen/dimen5"
+        android:background="@color/line_color" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:src="@drawable/ic_covered_ellipsize"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dimen10"
+        android:layout_height="@dimen/dimen10"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:text="@string/address"
+        android:layout_gravity="center"
+        android:textColor="@color/top_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="50dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:alpha="0.5"
+        android:layout_marginStart="@dimen/dimen5"
+        android:background="@color/line_color" />
+
+    <ImageView
+        android:id="@+id/iv_payment"
+        android:src="@drawable/ic_ellipsize"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/dimen10"
+        android:layout_height="@dimen/dimen10"/>
+
+    <TextView
+        android:id="@+id/tv_payment"
+        android:text="@string/payment"
+        android:layout_gravity="center"
+        android:textColor="@color/top_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

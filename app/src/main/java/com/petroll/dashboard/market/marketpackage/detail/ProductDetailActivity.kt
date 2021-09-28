@@ -6,14 +6,20 @@ import com.petroll.databinding.ActivityProductDetailBinding
 import com.petroll.databinding.ActivityProductListingBinding
 import com.petroll.utils.BaseActivity
 import android.app.Activity
+import android.content.Intent
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
+import com.petroll.R
+import com.petroll.cart.CartActivity
+import com.petroll.utils.ViewPagerAdapter
 
 
 class ProductDetailActivity: BaseActivity() {
 
     var screenHeight: Int = 0
     var screenWidth: Int = 0
+    private lateinit var adapter: ViewPagerAdapter
 
     lateinit var binding: ActivityProductDetailBinding
 
@@ -29,8 +35,25 @@ class ProductDetailActivity: BaseActivity() {
 
         updateDimen()
         val params = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        val vpParam = RelativeLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         params.height = (screenHeight * 0.35).toInt()
+        vpParam.height = (screenHeight * 0.30).toInt()
         binding.rlViewpager.layoutParams = params
+        binding.rlVpView.layoutParams = vpParam
+
+        hideBottomBar(getString(R.string.add_cart))
+        nextClickListener(Intent(this, CartActivity::class.java))
+        setViewPager()
+
+        setUpButton()
+    }
+
+    private fun setUpButton() {
+        binding.back.tvBack.text = getString(R.string.product_detail)
+        binding.back.backLayout.setOnClickListener {
+            finish()
+            showBottomBar()
+        }
     }
 
     private fun updateDimen() {
@@ -38,5 +61,21 @@ class ProductDetailActivity: BaseActivity() {
         windowManager.defaultDisplay.getMetrics(displayMetrics)
         screenHeight = displayMetrics.heightPixels
         screenWidth = displayMetrics.widthPixels
+    }
+
+    private fun setViewPager() {
+        adapter = ViewPagerAdapter(
+            listOf(
+                R.drawable.ic_product,
+                R.drawable.ic_product_detail,
+                R.drawable.ic_product_detail,
+                R.drawable.ic_product_detail,
+                R.drawable.ic_product_detail
+            ), this
+        )
+
+        binding.vp.adapter = adapter
+
+        binding.dotsIndicator.setViewPager(binding.vp)
     }
 }

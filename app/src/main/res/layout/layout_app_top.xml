@@ -10,15 +10,13 @@
         android:id="@+id/rl_back_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-40dp"
-        android:layout_marginTop="-70dp"
-        android:background="@drawable/app_circle" />
+        android:background="@drawable/half_circle" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen10"
-        android:layout_marginStart="@dimen/dimen5">
+        android:layout_marginStart="@dimen/dimen20">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_back"
