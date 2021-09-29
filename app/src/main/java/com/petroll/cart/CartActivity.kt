@@ -1,5 +1,6 @@
 package com.petroll.cart
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -15,9 +16,7 @@ import com.petroll.cart.fragments.PaymentFragment
 import android.view.MotionEvent
 
 import android.view.View.OnTouchListener
-
-
-
+import androidx.core.view.get
 
 
 class CartActivity : BaseActivity() {
@@ -35,11 +34,12 @@ class CartActivity : BaseActivity() {
         setUpBottomClickedView(false)
         hideBottomBar(getString(R.string.confirm_order))
         backButtonHandling()
+        binding.back.tvBack.text = getString(R.string.your_cart)
         setNextClick()
         setUpViewPager()
     }
 
-    private fun setNextClick() {
+    fun setNextClick() {
 
         baseBind.rlNext.setOnClickListener {
             when (binding.vpFragments.currentItem) {
@@ -59,8 +59,8 @@ class CartActivity : BaseActivity() {
                 }
                 else -> {
                     // todo nothing
-//                    binding.vpFragments.setCurrentItem(1)
-
+                    val intent = Intent(this, OrderPlacedActivity::class.java)
+                    startActivity(intent)
                 }
             }
         }
@@ -76,6 +76,8 @@ class CartActivity : BaseActivity() {
                     binding.vpFragments.setCurrentItem(0)
                     binding.back.tvBack.text = getString(R.string.your_cart)
                     setBottomBarText(getString(R.string.confirm_order))
+//                    backButtonHandling()
+                    setNextClick()
                     binding.topProgress.ivAddress.setColorFilter(ContextCompat.getColor(this,R.color.line_color))
                     binding.topProgress.tvAddress.setTextColor(ContextCompat.getColor(this, R.color.top_text_color))
                 }

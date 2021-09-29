@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/ll_address_form"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen60"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@drawable/spinner_bg"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="@string/full_name"
+        android:layout_margin="@dimen/dimen10"
+        android:paddingStart="@dimen/dimen20"
+        android:textColorHint="@color/hint" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen60"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@drawable/spinner_bg"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="@string/mobile_number"
+        android:inputType="number"
+        android:layout_margin="@dimen/dimen10"
+        android:paddingStart="@dimen/dimen20"
+        android:textColorHint="@color/hint" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edt_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen60"
+        android:layout_marginTop="@dimen/dimen20"
+        android:background="@drawable/spinner_bg"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="@string/address_hint"
+        android:layout_margin="@dimen/dimen10"
+        android:paddingStart="@dimen/dimen20"
+        android:textColorHint="@color/hint" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginTop="@dimen/dimen20"
+            android:background="@drawable/spinner_bg"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/landmark"
+            android:layout_margin="@dimen/dimen10"
+            android:paddingStart="@dimen/dimen20"
+            android:textColorHint="@color/hint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginTop="@dimen/dimen20"
+            android:background="@drawable/spinner_bg"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/city"
+            android:layout_margin="@dimen/dimen10"
+            android:paddingStart="@dimen/dimen20"
+            android:textColorHint="@color/hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginTop="@dimen/dimen20"
+            android:background="@drawable/spinner_bg"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/state"
+            android:layout_margin="@dimen/dimen10"
+            android:paddingStart="@dimen/dimen20"
+            android:textColorHint="@color/hint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginTop="@dimen/dimen20"
+            android:background="@drawable/spinner_bg"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/postal_code"
+            android:layout_margin="@dimen/dimen10"
+            android:paddingStart="@dimen/dimen20"
+            android:textColorHint="@color/hint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dimen10"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:layout_height="@dimen/dimen50">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="Home"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            app:fontFamily="@font/poppins_regular"
+            android:layout_height="@dimen/dimen50"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:layout_height="@dimen/dimen50">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="Office"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            app:fontFamily="@font/poppins_regular"
+            android:layout_height="@dimen/dimen50"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/spinner_bg"
+            android:layout_marginEnd="@dimen/dimen10"
+            android:layout_height="@dimen/dimen50">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:text="Other"
+            android:layout_centerInParent="true"
+            app:fontFamily="@font/poppins_regular"
+            android:layout_height="match_parent"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

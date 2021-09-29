@@ -6,24 +6,42 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.petroll.R
+import com.petroll.cart.CartActivity
 import com.petroll.dashboard.adapter.AddressAdapter
 import com.petroll.dashboard.adapter.CartAdapter
 import com.petroll.databinding.FragmentAddressBinding
 import com.petroll.databinding.FragmentCartBinding
 import com.petroll.databinding.FragmentFollowingBinding
+import com.petroll.utils.BaseActivity
 
 class AddressFragment: Fragment() {
 
-    lateinit var binding: FragmentCartBinding
+    lateinit var binding: FragmentAddressBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCartBinding.inflate(layoutInflater)
+        binding = FragmentAddressBinding.inflate(layoutInflater)
+        binding.tvAddAddress.setOnClickListener {
+            if (binding.rvCart.visibility == View.VISIBLE) {
+                binding.newAddressForm.llAddressForm.visibility = View.VISIBLE
+                binding.rvCart.visibility = View.GONE
+
+                (activity as BaseActivity).setBottomBarText(getString(R.string.add_new_address))
+
+                (activity as BaseActivity).baseBind.rlNext.setOnClickListener {
+                    binding.newAddressForm.llAddressForm.visibility = View.GONE
+                    binding.rvCart.visibility = View.VISIBLE
+                    (activity as BaseActivity).setBottomBarText(getString(R.string.checkout))
+                    (activity as CartActivity).setNextClick()
+                }
+
+            }
+        }
         setUpRecyclerView()
-//        (activity as BaseActivity).hideBottomBar(resources.getString(R.string.add_new_address))
         return binding.root
     }
 
@@ -33,4 +51,15 @@ class AddressFragment: Fragment() {
         binding.rvCart.adapter = adapter
     }
 
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (isVisibleToUser) {
+            initiate()
+        }
+    }
+
+    public fun initiate() {
+       binding.rvCart.visibility = View.VISIBLE
+       binding.newAddressForm.llAddressForm.visibility = View.GONE
+   }
 }

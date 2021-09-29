@@ -114,6 +114,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
 
+        <activity android:name=".cart.OrderPlacedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
 
     </application>
 
