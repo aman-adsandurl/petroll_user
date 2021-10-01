@@ -29,7 +29,7 @@ class AdoptionActivity: BaseActivity() {
 
     private fun setUpRecyclerView() {
         binding.rvPost.layoutManager = LinearLayoutManager(this)
-            val adapter = AdoptionAdapter(listOf("a", "b","a", "b","a", "b"))
+            val adapter = AdoptionAdapter(listOf("a", "b","a", "b","a", "b"), this)
             binding.rvPost.adapter = adapter
     }
 

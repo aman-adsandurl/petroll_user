@@ -118,6 +118,17 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.PETRoll.NoActionBar"/>
 
+        <activity android:name=".dashboard.market.marketpackage.buy_detail.BuyDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.market.marketpackage.buy_detail.AuctionDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+
+        <activity android:name=".dashboard.service.AppoitmentDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PETRoll.NoActionBar"/>
 
     </application>
 

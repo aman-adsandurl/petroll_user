@@ -35,4 +35,5 @@
     <dimen name="dimen12">12dp</dimen>
     <dimen name="dimen45">45dp</dimen>
     <dimen name="minus_size">30dp</dimen>
+    <dimen name="dimen250">250dp</dimen>
 </resources>

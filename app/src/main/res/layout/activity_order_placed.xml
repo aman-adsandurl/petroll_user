@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/rl_top_bar"
@@ -18,17 +17,76 @@
             android:layout_weight="1" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/iv_center"
-        android:padding="@dimen/dimen20"
-        android:src="@drawable/ic_order_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:text="Order Accepted"
-        android:textSize="@dimen/text16"
-        android:fontFamily="@font/poppins_semibold"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rl_track"
+            android:layout_centerInParent="true"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_center"
+                    android:layout_width="@dimen/dimen300"
+                    android:layout_height="@dimen/dimen300"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/dimen20"
+                    android:src="@drawable/ic_order_status" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Order Accepted"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text16" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Your order No. #123.456 \n has been placed"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text16" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_track"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen60"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dimen20"
+            android:background="@drawable/button_white_curve">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/track_order"
+                android:textColor="@color/indicator_highlight"
+                android:textSize="@dimen/text20" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
 </LinearLayout>

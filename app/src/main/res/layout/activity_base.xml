@@ -58,15 +58,15 @@
 
             </RelativeLayout>
 
-        <com.etebarian.meowbottomnavigation.MeowBottomNavigation
-            android:id="@+id/bottm_nav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:mbn_backgroundBottomColor="@color/bottom_nav_color"
-            android:layout_alignParentBottom="true"
-            app:mbn_circleColor="@color/indicator_highlight"
-            app:mbn_selectedIconColor="@color/white"
-            app:mbn_defaultIconColor="@color/bottom_nav_inact"/>
+            <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+                android:id="@+id/bottm_nav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:mbn_backgroundBottomColor="@color/bottom_nav_color"
+                app:mbn_circleColor="@color/indicator_highlight"
+                app:mbn_defaultIconColor="@color/bottom_nav_inact"
+                app:mbn_selectedIconColor="@color/white" />
         </RelativeLayout>
     </RelativeLayout>
 

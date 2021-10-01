@@ -29,7 +29,7 @@ class LostFoundActivity: BaseActivity() {
 
     private fun setUpRecyclerView() {
         binding.rvPost.layoutManager = LinearLayoutManager(this)
-            val adapter = LostFoundAdapter(listOf("a", "b","a", "b","a", "b"))
+            val adapter = LostFoundAdapter(listOf("a", "b","a", "b","a", "b"), this)
             binding.rvPost.adapter = adapter
     }
 

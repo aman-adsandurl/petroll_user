@@ -1,12 +1,15 @@
 package com.petroll.dashboard.adapter
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.petroll.R
+import com.petroll.dashboard.community.MatingDetailActivity
 
-class LostFoundAdapter(private val mList: List<String>) :
+class LostFoundAdapter(private val mList: List<String>, val context: Activity) :
     RecyclerView.Adapter<LostFoundAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -16,6 +19,10 @@ class LostFoundAdapter(private val mList: List<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, MatingDetailActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

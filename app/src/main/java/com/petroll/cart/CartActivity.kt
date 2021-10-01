@@ -61,6 +61,7 @@ class CartActivity : BaseActivity() {
                     // todo nothing
                     val intent = Intent(this, OrderPlacedActivity::class.java)
                     startActivity(intent)
+                    finish()
                 }
             }
         }

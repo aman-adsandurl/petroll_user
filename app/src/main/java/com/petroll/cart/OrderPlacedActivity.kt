@@ -23,14 +23,15 @@ class OrderPlacedActivity: BaseActivity() {
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
 
-        params.height = (screenHeight * 0.35).toInt()
-        params.width = (screenWidth * 0.35).toInt()
-        binding.ivCenter.layoutParams = params
         setUpFragmentsBottomBar()
         // todo to shift it to base activity
         setUpBottomClickedView(false)
         backSetUp()
         hideBottomBar(getString(R.string.continue_shopping))
+
+        baseBind.rlNext.setOnClickListener {
+            finish()
+        }
     }
 
     fun backSetUp() {
@@ -38,14 +39,5 @@ class OrderPlacedActivity: BaseActivity() {
         binding.back.backLayout.setOnClickListener {
             finish()
         }
-    }
-
-    var screenHeight: Int = 0
-    var screenWidth: Int = 0
-    private fun updateDimen() {
-        val displayMetrics = DisplayMetrics()
-        windowManager.defaultDisplay.getMetrics(displayMetrics)
-        screenHeight = displayMetrics.heightPixels
-        screenWidth = displayMetrics.widthPixels
     }
 }

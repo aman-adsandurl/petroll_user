@@ -1,13 +1,16 @@
 package com.petroll.dashboard.adapter
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.petroll.R
+import com.petroll.dashboard.service.AppoitmentDetailActivity
 
-class AppointmentAdapter(private val mList: List<String>) :
+class AppointmentAdapter(private val mList: List<String>, val context: Activity) :
     RecyclerView.Adapter<AppointmentAdapter.ViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -20,6 +23,10 @@ class AppointmentAdapter(private val mList: List<String>) :
 
     override fun onBindViewHolder(holder: AppointmentAdapter.ViewHolder, position: Int) {
 
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, AppoitmentDetailActivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

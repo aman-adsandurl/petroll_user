@@ -80,7 +80,7 @@ class AuctionFragment(val isAuction: Boolean) : Fragment() {
     private fun setUpRecyclerView() {
         binding.rvAuction.layoutManager = LinearLayoutManager(context)
         if (!isAuction) {
-            val adapter = AppointmentAdapter(data)
+            val adapter = AppointmentAdapter(data, requireActivity())
             binding.rvAuction.adapter = adapter
         } else {
             val adapter = AuctionAdapter(data, requireContext())

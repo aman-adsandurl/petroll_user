@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dimen30"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/back"
+            layout="@layout/layout_app_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_product"
+        android:src="@drawable/ic_buy_detail"
+        android:layout_width="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/dimen150"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/dimen10"
+        app:cardElevation="@dimen/dimen5"
+        android:layout_marginTop="-40dp"
+        android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen10"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Wooden Dog House"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text16"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Wooden Made"
+                    android:layout_below="@+id/tv_title"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text16" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen10"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+               <androidx.cardview.widget.CardView
+                   app:cardElevation="@dimen/dimen5"
+                   app:cardBackgroundColor="@color/white"
+                   app:cardCornerRadius="@dimen/dimen10"
+                   android:layout_height="wrap_content"
+                   android:layout_width="0dp"
+                   android:layout_margin="@dimen/dimen5"
+                   android:layout_weight="1">
+
+                   <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+                       <ImageView
+                           android:id="@+id/iv_bid"
+                           android:layout_width="@dimen/dimen60"
+                           android:layout_height="@dimen/dimen60"/>
+
+                       <LinearLayout
+                           android:layout_toEndOf="@+id/iv_bid"
+                           android:layout_width="wrap_content"
+                           android:orientation="vertical"
+                           android:layout_centerInParent="true"
+                           android:layout_height="wrap_content">
+
+                           <androidx.appcompat.widget.AppCompatTextView
+                               android:layout_width="wrap_content"
+                               android:text="Current Bid"
+                               android:fontFamily="@font/poppins_regular"
+                               android:textSize="@dimen/dimen12"
+                               android:layout_height="wrap_content"/>
+
+                           <androidx.appcompat.widget.AppCompatTextView
+                               android:layout_width="wrap_content"
+                               android:text="AED 8.00"
+                               android:textSize="@dimen/dimen14"
+                               android:textColor="@color/indicator_highlight"
+                               android:layout_height="wrap_content"/>
+
+                       </LinearLayout>
+
+                   </RelativeLayout>
+               </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    app:cardElevation="@dimen/dimen5"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/dimen10"
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_margin="@dimen/dimen5"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_auction"
+                            android:layout_width="@dimen/dimen60"
+                            android:layout_height="@dimen/dimen60"/>
+
+                        <LinearLayout
+                            android:layout_toEndOf="@+id/iv_auction"
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerInParent="true"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:text="Auction Ends"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textSize="@dimen/dimen12"
+                                android:layout_height="wrap_content"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:text="04h:30m"
+                                android:textSize="@dimen/dimen14"
+                                android:textColor="@color/blue_auction"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_user"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_avatar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/iv_user"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen25"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Owner"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Mr. Allam"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text16"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                 android:gravity="end|center"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:text="Start From"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:text="AED 5.00"
+                        android:textSize="@dimen/text16"
+                        android:layout_marginTop="@dimen/dimen5"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardElevation="@dimen/dimen10"
+        app:cardCornerRadius="@dimen/dimen10"
+        android:layout_marginEnd="@dimen/dimen10"
+        android:layout_marginStart="@dimen/dimen10"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen10"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:text="Lorem lk test text to demo"
+                android:textColor="@color/black"
+                android:alpha="0.6"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/text14"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:text="Bidders"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen10"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/text16"
+                android:layout_height="wrap_content"/>
+
+<!-- need to replace with recyclerview -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_sample"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_avatar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/iv_sample"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen25"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Alfaz Khan"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text16"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="25 m ago"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/indicator_highlight"
+                    android:layout_width="@dimen/dimen100">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:padding="@dimen/dimen5"
+                        android:text="AED 5.00"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/black"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_sample1"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_avatar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/iv_sample1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen25"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Arfa Khan"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text16"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="25 m ago"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/indicator_highlight"
+                    android:layout_width="@dimen/dimen100">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:padding="@dimen/dimen5"
+                        android:text="AED 6.00"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/black"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen5"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_sample2"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="@dimen/dimen25"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_avatar" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/iv_sample2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dimen25"
+                    android:layout_marginStart="@dimen/dimen10"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Farma Khan"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text16"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="25 m ago"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_height="@dimen/dimen40"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dimen5"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/indicator_highlight"
+                    android:layout_width="@dimen/dimen100">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:padding="@dimen/dimen5"
+                        android:text="AED 5.10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/black"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

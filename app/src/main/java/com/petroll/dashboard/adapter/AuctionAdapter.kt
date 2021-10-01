@@ -1,12 +1,14 @@
 package com.petroll.dashboard.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.petroll.R
+import com.petroll.dashboard.market.marketpackage.buy_detail.AuctionDetailActivity
 
 class AuctionAdapter(private val mList: List<String>, private val context: Context) :
     RecyclerView.Adapter<AppointmentAdapter.ViewHolder>() {
@@ -18,6 +20,11 @@ class AuctionAdapter(private val mList: List<String>, private val context: Conte
     }
 
     override fun onBindViewHolder(holder: AppointmentAdapter.ViewHolder, position: Int) {
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, AuctionDetailActivity::class.java)
+            context.startActivity(intent)
+        }
 
         if (mList[position] == "ongoing") {
             holder.auctionTitle.text = context.resources.getString(R.string.auction_ends)

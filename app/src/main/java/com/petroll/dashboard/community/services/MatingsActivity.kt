@@ -27,7 +27,7 @@ class MatingsActivity: BaseActivity() {
 
     private fun setUpRecyclerView() {
         binding.rvPost.layoutManager = LinearLayoutManager(this)
-            val adapter = MatingAdapter(listOf("a", "b","a", "b","a", "b"))
+            val adapter = MatingAdapter(listOf("a", "b","a", "b","a", "b"),this)
             binding.rvPost.adapter = adapter
     }
 

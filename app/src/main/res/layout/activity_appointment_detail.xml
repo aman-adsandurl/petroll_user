@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/dimen30"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rl_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/back"
+            layout="@layout/layout_app_top"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_product"
+                android:src="@drawable/ic_buy_detail"
+                android:layout_width="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_height="@dimen/dimen150"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="@dimen/dimen10"
+                app:cardElevation="@dimen/dimen5"
+                android:layout_marginTop="-40dp"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimen10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Allie"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text16"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_title"
+                            android:layout_centerHorizontal="true"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Golden Retriever"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text16" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="@dimen/dimen5"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dimen10"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_margin="@dimen/dimen5"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/iv_bid"
+                                    android:layout_width="@dimen/dimen60"
+                                    android:layout_height="@dimen/dimen60"
+                                    android:padding="@dimen/dimen10"
+                                    android:src="@drawable/ic_detail_cal" />
+
+                                <LinearLayout
+                                    android:layout_toEndOf="@+id/iv_bid"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerInParent="true"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:text="Date of Birth"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textSize="@dimen/dimen12"
+                                        android:layout_height="wrap_content"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:text="02-06-2020"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textSize="@dimen/dimen14"
+                                        android:textColor="@color/black"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            app:cardElevation="@dimen/dimen5"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/dimen10"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_margin="@dimen/dimen5"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:src="@drawable/ic_gender"
+                                    android:padding="@dimen/dimen10"
+                                    android:id="@+id/iv_auction"
+                                    android:layout_width="@dimen/dimen60"
+                                    android:layout_height="@dimen/dimen60"/>
+
+                                <LinearLayout
+                                    android:layout_toEndOf="@+id/iv_auction"
+                                    android:layout_width="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_centerInParent="true"
+                                    android:layout_height="wrap_content">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:text="Gender"
+
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:textSize="@dimen/dimen12"
+                                        android:layout_height="wrap_content"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:text="Female"
+                                        android:textSize="@dimen/dimen14"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/poppins_regular"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        app:cardCornerRadius="@dimen/dimen10"
+                        android:layout_marginTop="@dimen/dimen10"
+                        app:cardBackgroundColor="@color/light_green1"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:padding="@dimen/dimen10"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:text="Service:"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@color/green3"
+                                android:layout_marginStart="@dimen/dimen5"
+                                android:layout_height="wrap_content"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:text="Doctor Visit"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/poppins_regular"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/dimen5"
+                                android:layout_height="wrap_content"/>
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen25"
+                            android:layout_marginStart="@dimen/dimen10"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Dr. Noora Fatehi"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text16"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="General Physician"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end|center"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_toStartOf="@+id/rl_call"
+                                android:src="@drawable/ic_chat_red"
+                                android:layout_marginEnd="@dimen/dimen10"
+                                android:layout_width="@dimen/dimen30"
+                                android:layout_height="@dimen/dimen30"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_call"
+                                android:layout_width="@dimen/dimen30"
+                                android:layout_height="@dimen/dimen30"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="@dimen/dimen5"
+                                android:background="@drawable/small_circle"
+                                android:backgroundTint="@color/indicator_highlight">
+
+                                <ImageView
+                                    android:layout_width="@dimen/dimen30"
+                                    android:layout_height="@dimen/dimen30"
+                                    android:layout_centerInParent="true"
+                                    android:padding="@dimen/dimen5"
+                                    android:src="@drawable/ic_call_white" />
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dimen25"
+                            android:layout_marginStart="@dimen/dimen10"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Pet Clinic Name"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text16"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Date: 25 Mar 2021 | Time: 4:30 PM"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end|center"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:fontFamily="@font/poppins_regular"
+                           android:text="AED 34.00"
+                           android:textColor="@color/indicator_highlight" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/iv_loc"
+                            android:src="@drawable/ic_location"
+                            android:layout_width="@dimen/dimen20"
+                            android:layout_height="@dimen/dimen20"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/iv_loc"
+                            android:text="22 iron gate" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:layout_marginStart="@dimen/dimen10"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emergency Contact:"
+                            android:textColor="@color/black" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+91-9811334454"
+                            android:layout_alignParentEnd="true"
+                            android:textColor="@color/indicator_highlight" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardElevation="@dimen/dimen10"
+                app:cardCornerRadius="@dimen/dimen10"
+                android:layout_marginEnd="@dimen/dimen10"
+                android:layout_marginStart="@dimen/dimen10"
+                android:layout_marginTop="@dimen/dimen20"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dimen10"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/dimen10"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="@dimen/text16"
+                        android:layout_height="wrap_content"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:text="Lorem lk test text to demo"
+                        android:textColor="@color/black"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="@dimen/text14"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

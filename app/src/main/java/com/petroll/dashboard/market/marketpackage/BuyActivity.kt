@@ -4,15 +4,12 @@ import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.GridLayoutManager
 import com.petroll.R
-import com.petroll.dashboard.adapter.ShopAdapter
-import com.petroll.databinding.ActivityBuyBinding
-import com.petroll.databinding.ActivityShopBinding
-import com.petroll.utils.BaseActivity
-import com.allyants.chipview.SimpleChipAdapter
 import com.petroll.dashboard.adapter.BuyAdapter
+import com.petroll.databinding.ActivityBuyBinding
+import com.petroll.utils.BaseActivity
 
 
-class BuyActivity: BaseActivity() {
+class BuyActivity : BaseActivity() {
 
     lateinit var binding: ActivityBuyBinding
 
@@ -37,17 +34,26 @@ class BuyActivity: BaseActivity() {
 
     private fun setUpRecyclerView() {
         binding.iconLayout.iclCheck.setImageResource(
-            R.drawable.ic_calendar, AppCompatResources.getColorStateList(this,
-                R.color.skip_circle_color))
+            R.drawable.ic_calendar, AppCompatResources.getColorStateList(
+                this,
+                R.color.skip_circle_color
+            )
+        )
         binding.iconLayout.iclFav.setImageResource(
-            R.drawable.ic_fav_top, AppCompatResources.getColorStateList(this,
-                R.color.skip_circle_color))
+            R.drawable.ic_fav_top, AppCompatResources.getColorStateList(
+                this,
+                R.color.skip_circle_color
+            )
+        )
         binding.iconLayout.iclWish.setImageResource(
-            R.drawable.ic_wishlist, AppCompatResources.getColorStateList(this,
-                R.color.skip_circle_color))
+            R.drawable.ic_wishlist, AppCompatResources.getColorStateList(
+                this,
+                R.color.skip_circle_color
+            )
+        )
 
         binding.rvShop.layoutManager = GridLayoutManager(this, 2)
-        val adapter = BuyAdapter()
+        val adapter = BuyAdapter(this)
         binding.rvShop.adapter = adapter
     }
 }

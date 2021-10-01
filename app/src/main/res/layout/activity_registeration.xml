@@ -14,6 +14,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:fillViewport="true"
         android:layout_height="match_parent">
 
     <LinearLayout
@@ -64,7 +65,7 @@
             android:paddingStart="@dimen/dimen10"
             android:layout_marginTop="@dimen/dimen20"
             android:background="@drawable/spinner_bg"
-            android:hint="@string/hint_email"
+            android:hint="@string/hint_email_only"
             android:fontFamily="@font/poppins_regular"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen60"/>
@@ -132,7 +133,6 @@
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/have_account"
                 android:textSize="@dimen/text16"
-                android:textColor="@color/black"
                 android:layout_height="wrap_content"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -143,6 +143,7 @@
                 android:id="@+id/tv_signin"
                 android:textSize="@dimen/text16"
                 android:layout_marginStart="@dimen/dimen5"
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content"/>
         </RelativeLayout>

@@ -25,7 +25,7 @@ class FeedFragment: Fragment() {
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.appointment)
+        binding.back.tvBack.text = resources.getText(R.string.feeds)
         binding.back.backLayout.setOnClickListener {
             (activity as BaseActivity).onHome()
         }

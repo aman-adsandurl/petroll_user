@@ -13,6 +13,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
 import com.petroll.Navigation.fragments.*
 import com.petroll.R
+import com.petroll.dashboard.fragments.FeedFragment
 import com.petroll.dashboard.fragments.HomeFragment
 import com.petroll.dashboard.fragments.NotificationFragment
 import com.petroll.dashboard.fragments.ProfileDashboardFragment
@@ -99,6 +100,7 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
                 HOME -> setFragment(HomeFragment(), true)
                 NOTIFICATION -> setFragment(NotificationFragment(), true)
                 PROFILE -> setFragment(ProfileDashboardFragment(), true)
+                FEED -> setFragment(FeedFragment(), true)
             }
         }
     }
