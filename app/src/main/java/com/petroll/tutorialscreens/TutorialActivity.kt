@@ -33,15 +33,15 @@ class TutorialActivity : AppCompatActivity() {
         val pagerAdapter = ScreenSlidePagerAdapter(supportFragmentManager)
         binding.slider.adapter = pagerAdapter
 
-        binding.slider.setOnTouchListener { view, motionEvent -> true; }
+//        binding.slider.setOnTouchListener { view, motionEvent -> true; }
 
-
-        binding.slider.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
+        binding.slider.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
                 positionOffsetPixels: Int
-            ) {}
+            ) {
+            }
 
             override fun onPageSelected(position: Int) {
                 if (position < NUM_PAGES - 1) {
@@ -58,16 +58,7 @@ class TutorialActivity : AppCompatActivity() {
 
         binding.rlNext.setOnClickListener {
             Log.e("anim", "------ > " + binding.slider.currentItem.toString());
-            if (binding.slider.currentItem == (NUM_PAGES - 1)) {
-                // todo intent to call sigin activity
-                val intent = Intent(this, LoginActivity::class.java)
-                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                startActivity(intent)
-                finish()
-            } else {
-                binding.slider.currentItem = binding.slider.currentItem + 1
-            }
+            onPageChange()
         }
 
         binding.rlSkip.setOnClickListener {
@@ -76,6 +67,19 @@ class TutorialActivity : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
+        }
+    }
+
+    private fun onPageChange() {
+        if (binding.slider.currentItem == (NUM_PAGES - 1)) {
+            // todo intent to call sigin activity
+            val intent = Intent(this, LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
+        } else {
+            binding.slider.currentItem = binding.slider.currentItem + 1
         }
     }
 
@@ -95,7 +99,8 @@ class TutorialActivity : AppCompatActivity() {
      * screen slider pager adapter to render single fragment with image and text
      *
      */
-    private inner class ScreenSlidePagerAdapter(fm: FragmentManager) : FragmentStatePagerAdapter(fm) {
+    private inner class ScreenSlidePagerAdapter(fm: FragmentManager) :
+        FragmentStatePagerAdapter(fm) {
         override fun getCount(): Int = NUM_PAGES
         override fun getItem(position: Int): Fragment = TutorialScreenFragment(position)
     }
