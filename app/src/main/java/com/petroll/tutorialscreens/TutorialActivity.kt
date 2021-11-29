@@ -35,6 +35,7 @@ class TutorialActivity : AppCompatActivity() {
 
         binding.slider.setOnTouchListener { view, motionEvent -> true; }
 
+
         binding.slider.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
             override fun onPageScrolled(
                 position: Int,
