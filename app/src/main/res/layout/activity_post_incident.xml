@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".dashboard.community.services.PostIncidentActivity"
+    tools:context=".ui.dashboard.community.services.PostIncidentActivity"
     android:layout_height="match_parent">
 
     <include

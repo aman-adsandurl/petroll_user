@@ -1,22 +1,13 @@
 package com.petroll.utils
 
-import android.widget.LinearLayout
 import android.content.Context
-import android.content.Intent
 import android.content.res.ColorStateList
-import android.graphics.Color
-import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-
 import android.view.LayoutInflater
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.RelativeLayout
-import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
 import com.petroll.R
-import com.petroll.dashboard.DashboardActivity
-import org.w3c.dom.Text
 
 class IconCircleLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : LinearLayout(context, attrs, defStyleAttr) {
 

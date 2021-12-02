@@ -11,13 +11,13 @@ import androidx.fragment.app.Fragment
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
-import com.petroll.Navigation.fragments.*
 import com.petroll.R
-import com.petroll.dashboard.fragments.FeedFragment
-import com.petroll.dashboard.fragments.HomeFragment
-import com.petroll.dashboard.fragments.NotificationFragment
-import com.petroll.dashboard.fragments.ProfileDashboardFragment
 import com.petroll.databinding.ActivityBaseBinding
+import com.petroll.ui.dashboard.fragments.FeedFragment
+import com.petroll.ui.dashboard.fragments.HomeFragment
+import com.petroll.ui.dashboard.fragments.NotificationFragment
+import com.petroll.ui.dashboard.fragments.ProfileDashboardFragment
+import com.petroll.ui.navigation.fragments.*
 
 
 open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
@@ -135,7 +135,12 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         baseBind.bottmNav.add(MeowBottomNavigation.Model(HOME, R.drawable.ic_botm_home))
         baseBind.bottmNav.add(MeowBottomNavigation.Model(FAV, R.drawable.ic_suggestion))
         baseBind.bottmNav.add(MeowBottomNavigation.Model(FEED, R.drawable.ic_inact_feeds))
-        baseBind.bottmNav.add(MeowBottomNavigation.Model(NOTIFICATION, R.drawable.ic_inact_notification))
+        baseBind.bottmNav.add(
+            MeowBottomNavigation.Model(
+                NOTIFICATION,
+                R.drawable.ic_inact_notification
+            )
+        )
         baseBind.bottmNav.add(MeowBottomNavigation.Model(PROFILE, R.drawable.ic_inact_profile))
     }
 

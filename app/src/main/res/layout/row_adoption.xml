@@ -7,7 +7,7 @@
     android:layout_marginHorizontal="@dimen/dimen15"
     android:layout_marginVertical="@dimen/dimen10"
     android:elevation="@dimen/dimen10"
-    tools:context=".dashboard.community.services.AdoptionActivity"
+    tools:context=".ui.dashboard.community.services.AdoptionActivity"
     app:cardCornerRadius="@dimen/dimen20">
 
     <androidx.appcompat.widget.LinearLayoutCompat

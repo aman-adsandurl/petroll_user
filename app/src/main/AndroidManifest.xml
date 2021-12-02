@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PETRoll">
         <activity
-            android:name=".splash.SplashActivity"
+            android:name=".ui.splash.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.PETRoll.NoActionBar">
             <intent-filter>
@@ -20,115 +20,144 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".tutorialscreens.TutorialActivity"
+        <activity
+            android:name=".ui.tutorialscreens.TutorialActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".onboarding.LandingPageActivity"
+        <activity
+            android:name=".ui.onboarding.LandingPageActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".onboarding.RegisterationActivity"
+        <activity
+            android:name=".ui.onboarding.RegisterationActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".onboarding.LoginActivity"
+        <activity
+            android:name=".ui.onboarding.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".onboarding.ForgotPasswordActivity"
+        <activity
+            android:name=".ui.onboarding.ForgotPasswordActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.DashboardActivity"
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.MarketActivity"
+        <activity
+            android:name=".ui.dashboard.market.MarketActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.service.ServiceActivity"
+        <activity
+            android:name=".ui.dashboard.service.ServiceActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.community.CommunityActivity"
+        <activity
+            android:name=".ui.dashboard.community.CommunityActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.community.services.PostActivity"
+        <activity
+            android:name=".ui.dashboard.community.services.PostActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.community.services.MatingsActivity"
+        <activity
+            android:name=".ui.dashboard.community.services.MatingsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
-        <activity android:name=".dashboard.community.services.LostFoundActivity"
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.community.services.LostFoundActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
-        <activity android:name=".dashboard.community.services.AdoptionActivity"
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.community.services.AdoptionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
-        <activity android:name=".dashboard.community.services.PostIncidentActivity"
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.community.services.PostIncidentActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
-        <activity android:name=".dashboard.community.services.FindHelpActivity"
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.community.services.FindHelpActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
-        <activity android:name=".dashboard.community.services.NewsEventActivity"
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.community.services.NewsEventActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
-        <activity android:name=".dashboard.market.marketpackage.ShopActivity"
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.ShopActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.BuyActivity"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.BuyActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.AuctionActivity"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.AuctionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.service.servicepackage.VertinaryActivity"
+        <activity
+            android:name=".ui.dashboard.service.servicepackage.VertinaryActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.service.servicepackage.PeerActivity"
+        <activity
+            android:name=".ui.dashboard.service.servicepackage.PeerActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.detail.ShopDetail"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.detail.ShopDetail"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.detail.ProductListingActivity"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.detail.ProductListingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.detail.ProductDetailActivity"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.detail.ProductDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".cart.CartActivity"
+        <activity
+            android:name=".ui.cart.CartActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".cart.OrderPlacedActivity"
+        <activity
+            android:name=".ui.cart.OrderPlacedActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.buy_detail.BuyDetailActivity"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.buy_detail.BuyDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.market.marketpackage.buy_detail.AuctionDetailActivity"
+        <activity
+            android:name=".ui.dashboard.market.marketpackage.buy_detail.AuctionDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
-        <activity android:name=".dashboard.service.AppoitmentDetailActivity"
+        <activity
+            android:name=".ui.dashboard.service.AppoitmentDetailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.PETRoll.NoActionBar"/>
+            android:theme="@style/Theme.PETRoll.NoActionBar" />
 
     </application>
 
