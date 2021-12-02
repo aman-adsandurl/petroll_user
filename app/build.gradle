@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -18,8 +19,20 @@ android {
     }
 
     buildTypes {
+        def addConstantTo = { target, constantName, constantValue ->
+            target.manifestPlaceholders += [(constantName): constantValue]
+            target.buildConfigField "String", "${constantName}", "\"${constantValue}\""
+        }
+        debug {
+            addConstantTo(owner, "B", "https://pet-roll.co/admin")//BASE URL
+            addConstantTo(owner, "S", "/api/")//SUB PATH AFTER BASE
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
         release {
-            minifyEnabled false
+            addConstantTo(owner, "B", "https://pet-roll.co/admin")//BASE URL
+            addConstantTo(owner, "S", "/api/")//SUB PATH AFTER BASE
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
