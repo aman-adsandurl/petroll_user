@@ -29,9 +29,15 @@ class IconCircleLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: In
 //        llBg = view.findViewById(R.id.ll_bg)
     }
 
-    public fun setImageResource(image: Int, color: ColorStateList) {
+    fun setImageResource(image: Int, color: ColorStateList) {
         ivIcon.setBackgroundResource(image)
         rlBg.backgroundTintList = color
+    }
+
+    fun setImageSize(width: Int, height: Int) {
+        ivIcon.requestLayout()
+        ivIcon.layoutParams.width = width
+        ivIcon.layoutParams.height = height
     }
 
 //    public fun setBackgroundColorTint(color: ColorStateList) {

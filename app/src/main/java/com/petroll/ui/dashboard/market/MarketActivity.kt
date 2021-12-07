@@ -28,9 +28,21 @@ class MarketActivity : BaseActivity() {
     }
 
     private fun setUpIconLayout() {
-        binding.iconLayout.iclCheck.setImageResource(R.drawable.ic_calendar, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
-        binding.iconLayout.iclFav.setImageResource(R.drawable.ic_fav_top, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
-        binding.iconLayout.iclWish.setImageResource(R.drawable.ic_wishlist, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
+        binding.iconLayout.iclCheck.setImageResource(
+            R.drawable.ic_calendar,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        binding.iconLayout.iclFav.setImageResource(
+            R.drawable.ic_fav_top,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+
+        binding.iconLayout.iclFav.setImageSize(41, 55)
+
+        binding.iconLayout.iclWish.setImageResource(
+            R.drawable.ic_wishlist,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
 
 
         binding.shopLayout.setSmallCircle()
@@ -38,22 +50,56 @@ class MarketActivity : BaseActivity() {
         binding.auctionLayout.setSmallCircle()
 
 
-        binding.shopLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.light_yellow))
-        binding.sellLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.ligh_greyish))
-        binding.auctionLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.lighter_yellow))
+        binding.shopLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.light_yellow
+            )
+        )
+        binding.sellLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.ligh_greyish
+            )
+        )
+        binding.auctionLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.lighter_yellow
+            )
+        )
 
         binding.shopLayout.setImageText(resources.getString(R.string.shop), R.drawable.ic_shop)
         binding.sellLayout.setImageText(resources.getString(R.string.buy_sell), R.drawable.ic_sell)
-        binding.auctionLayout.setImageText(resources.getString(R.string.auction), R.drawable.ic_auction_market)
+        binding.auctionLayout.setImageText(
+            resources.getString(R.string.auction),
+            R.drawable.ic_auction_market
+        )
 
-        binding.shopLayout.setTextColorLayout(AppCompatResources.getColorStateList(this, R.color.black))
-        binding.sellLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.auctionLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
+        binding.shopLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.sellLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.auctionLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
 
 
         binding.shopLayout.setSmallTextSize(
             TypedValue.COMPLEX_UNIT_PX,
-            resources.getDimension(R.dimen.dimen14))
+            resources.getDimension(R.dimen.dimen14)
+        )
         binding.sellLayout.setSmallTextSize(
             TypedValue.COMPLEX_UNIT_PX,
             resources.getDimension(R.dimen.dimen14)
