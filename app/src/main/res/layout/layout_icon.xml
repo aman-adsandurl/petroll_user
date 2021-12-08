@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
     android:gravity="end"
     android:layout_height="wrap_content">
 
@@ -15,13 +16,31 @@
         android:layout_toEndOf="@+id/icl_check"
         android:layout_marginEnd="@dimen/dimen8"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
     <com.petroll.utils.IconCircleLayout
         android:id="@+id/icl_wish"
         android:layout_toEndOf="@+id/icl_fav"
         android:layout_width="wrap_content"
         android:layout_marginEnd="@dimen/dimen8"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
+    <!--    <com.petroll.utils.IconCircleLayout-->
+    <!--        android:id="@+id/ic_filter"-->
+    <!--        android:layout_width="@dimen/_26sdp"-->
+    <!--        android:layout_height="@dimen/_26sdp"-->
+    <!--        android:layout_marginEnd="@dimen/_8sdp"-->
+    <!--        android:layout_toEndOf="@id/icl_wish"-->
+    <!--        android:background="@drawable/ic_filter" />-->
+
+    <ImageView
+        android:id="@+id/ic_filter"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_26sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_toEndOf="@id/icl_wish"
+        android:src="@drawable/ic_filter"
+        android:visibility="gone"
+        tool:visibility="visible" />
 
 </RelativeLayout>

@@ -1,6 +1,8 @@
 package com.petroll.ui.dashboard.market.marketpackage
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.GridLayoutManager
 import com.petroll.R
@@ -32,10 +34,29 @@ class ShopActivity : BaseActivity() {
     }
 
     private fun setUpRecyclerView() {
-        binding.iconLayout.iclCheck.setImageResource(R.drawable.ic_calendar, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
-        binding.iconLayout.iclFav.setImageResource(R.drawable.ic_fav_top, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
-        binding.iconLayout.iclWish.setImageResource(R.drawable.ic_wishlist, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
+        binding.iconLayout.iclCheck.setImageResource(
+            R.drawable.ic_fav,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //bookmark
 
+        binding.iconLayout.iclFav.setImageResource(
+            R.drawable.ic_order,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my orders
+
+        binding.iconLayout.iclWish.setImageResource(
+            R.drawable.ic_cart,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my cart
+
+        binding.iconLayout.icFilter.visibility = View.VISIBLE
+        binding.iconLayout.icFilter.setOnClickListener {
+            Toast.makeText(this, "Filter Clicked", Toast.LENGTH_SHORT).show()
+            //TODO: onFilterClick
+        }
 
         binding.rvShop.layoutManager = GridLayoutManager(this, 2)
         val adapter = ShopAdapter(this@ShopActivity)
