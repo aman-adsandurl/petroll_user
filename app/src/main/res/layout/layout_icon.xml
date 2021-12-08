@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:gravity="end"
-    android:layout_marginEnd="@dimen/dimen8"
     android:layout_height="wrap_content">
 
     <com.petroll.utils.IconCircleLayout
@@ -22,6 +21,7 @@
         android:id="@+id/icl_wish"
         android:layout_toEndOf="@+id/icl_fav"
         android:layout_width="wrap_content"
+        android:layout_marginEnd="@dimen/dimen8"
         android:layout_height="wrap_content"/>
 
 </RelativeLayout>

@@ -9,12 +9,13 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import com.petroll.R
 
-class IconCircleLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : LinearLayout(context, attrs, defStyleAttr) {
+class IconCircleLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
+    LinearLayout(context, attrs, defStyleAttr) {
 
     constructor(context: Context?) : this(context, null, -1) {}
     constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, -1) {}
 
-//    lateinit var tvMessage: TextView
+    //    lateinit var tvMessage: TextView
     lateinit var ivIcon: ImageView
     lateinit var rlBg: RelativeLayout
 
@@ -35,9 +36,9 @@ class IconCircleLayout(context: Context?, attrs: AttributeSet?, defStyleAttr: In
     }
 
     fun setImageSize(width: Int, height: Int) {
-        ivIcon.requestLayout()
-        ivIcon.layoutParams.width = width
-        ivIcon.layoutParams.height = height
+        ivIcon.layoutParams = RelativeLayout.LayoutParams(
+            width, height
+        )
     }
 
 //    public fun setBackgroundColorTint(color: ColorStateList) {

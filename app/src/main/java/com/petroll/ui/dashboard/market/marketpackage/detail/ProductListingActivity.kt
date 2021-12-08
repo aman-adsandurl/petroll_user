@@ -30,7 +30,7 @@ class ProductListingActivity : BaseActivity() {
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.hello_pet)
+        binding.back.tvBack.text = resources.getText(R.string.product)
         binding.back.backLayout.setOnClickListener {
             finish()
         }

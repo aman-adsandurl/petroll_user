@@ -2,14 +2,16 @@ package com.petroll.ui.dashboard.market.marketpackage.detail
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import com.petroll.R
 import com.petroll.databinding.ActivityShopDetailBinding
 import com.petroll.utils.BaseActivity
 
-class ShopDetail: BaseActivity(), View.OnClickListener {
+class ShopDetail : BaseActivity(), View.OnClickListener {
 
     lateinit var binding: ActivityShopDetailBinding
 
@@ -27,9 +29,18 @@ class ShopDetail: BaseActivity(), View.OnClickListener {
     }
 
     private fun setUpIconLayout() {
-        binding.iconLayout.iclCheck.setImageResource(R.drawable.ic_calendar, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
-        binding.iconLayout.iclFav.setImageResource(R.drawable.ic_fav_top, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
-        binding.iconLayout.iclWish.setImageResource(R.drawable.ic_wishlist, AppCompatResources.getColorStateList(this,R.color.skip_circle_color))
+        binding.iconLayout.iclCheck.setImageResource(
+            R.drawable.ic_calendar,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        binding.iconLayout.iclFav.setImageResource(
+            R.drawable.ic_fav_top,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        binding.iconLayout.iclWish.setImageResource(
+            R.drawable.ic_wishlist,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
 
         binding.foodLayout.setSmallCircle()
         binding.accesoryLayout.setSmallCircle()
@@ -44,6 +55,7 @@ class ShopDetail: BaseActivity(), View.OnClickListener {
 
         binding.bedLayout.setSmallCircle()
         binding.homeLayout.setSmallCircle()
+        binding.viewAllLayout.setSmallCircle()
 
         //
         binding.foodLayout.setOnClickListener(this)
@@ -59,53 +71,183 @@ class ShopDetail: BaseActivity(), View.OnClickListener {
 
         binding.bedLayout.setOnClickListener(this)
         binding.homeLayout.setOnClickListener(this)
+        binding.viewAllLayout.setOnClickListener(this)
         //
 
-        binding.foodLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.green1))
-        binding.accesoryLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.owner_c))
-        binding.healthLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.ligh_greyish))
+        binding.foodLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.green1
+            )
+        )
+        binding.accesoryLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.owner_c
+            )
+        )
+        binding.healthLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.ligh_greyish
+            )
+        )
 
-        binding.toysLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.light_grey1))
-        binding.petsLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.yellow4))
+        binding.toysLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.light_grey1
+            )
+        )
+        binding.petsLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.yellow4
+            )
+        )
 
-        binding.medicineLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.blue3))
-        binding.groomingLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.light_yellow))
-        binding.clothingLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.pink4))
+        binding.medicineLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.blue3
+            )
+        )
+        binding.groomingLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.light_yellow
+            )
+        )
+        binding.clothingLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.pink4
+            )
+        )
 
-        binding.bedLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.pink2))
-        binding.homeLayout.setBackgroundColorTint(AppCompatResources.getColorStateList(this,R.color.green5))
+        binding.bedLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.pink2
+            )
+        )
+        binding.homeLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.green5
+            )
+        )
+        binding.viewAllLayout.setBackgroundColorTint(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.skip_circle_color
+            )
+        )
 
         binding.foodLayout.setImageText(resources.getString(R.string.food), R.drawable.ic_food)
-        binding.accesoryLayout.setImageText(resources.getString(R.string.accesories), R.drawable.ic_accesory)
-        binding.healthLayout.setImageText(resources.getString(R.string.health_supply), R.drawable.ic_health)
+        binding.accesoryLayout.setImageText(
+            resources.getString(R.string.accesories),
+            R.drawable.ic_accesory
+        )
+        binding.healthLayout.setImageText(
+            resources.getString(R.string.health_supply),
+            R.drawable.ic_health
+        )
 
         binding.toysLayout.setImageText(resources.getString(R.string.toys), R.drawable.ic_toys)
         binding.petsLayout.setImageText(resources.getString(R.string.pets), R.drawable.ic_pets)
 
-        binding.medicineLayout.setImageText(resources.getString(R.string.medicine), R.drawable.ic_med)
-        binding.groomingLayout.setImageText(resources.getString(R.string.grooming), R.drawable.ic_groom)
-        binding.clothingLayout.setImageText(resources.getString(R.string.clothing), R.drawable.ic_cloth)
+        binding.medicineLayout.setImageText(
+            resources.getString(R.string.medicine),
+            R.drawable.ic_med
+        )
+        binding.groomingLayout.setImageText(
+            resources.getString(R.string.grooming),
+            R.drawable.ic_groom
+        )
+        binding.clothingLayout.setImageText(
+            resources.getString(R.string.clothing),
+            R.drawable.ic_cloth
+        )
 
         binding.bedLayout.setImageText(resources.getString(R.string.bed), R.drawable.ic_bed)
         binding.homeLayout.setImageText(resources.getString(R.string.homes), R.drawable.ic_home)
+        binding.viewAllLayout.setImageText(resources.getString(R.string.view_all))
 
-        binding.foodLayout.setTextColorLayout(AppCompatResources.getColorStateList(this, R.color.black))
-        binding.accesoryLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.healthLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
+        binding.foodLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.accesoryLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.healthLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
 
-        binding.toysLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.petsLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
+        binding.toysLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.petsLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
 
-        binding.medicineLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.groomingLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.clothingLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.bedLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
-        binding.homeLayout.setTextColorLayout(AppCompatResources.getColorStateList(this,R.color.black))
+        binding.medicineLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.groomingLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.clothingLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.bedLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.homeLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.black
+            )
+        )
+        binding.viewAllLayout.setTextColorLayout(
+            AppCompatResources.getColorStateList(
+                this,
+                R.color.white
+            )
+        )
 
 
         binding.foodLayout.setSmallTextSize(
             TypedValue.COMPLEX_UNIT_PX,
-            resources.getDimension(R.dimen.dimen14))
+            resources.getDimension(R.dimen.dimen14)
+        )
         binding.accesoryLayout.setSmallTextSize(
             TypedValue.COMPLEX_UNIT_PX,
             resources.getDimension(R.dimen.dimen14)
@@ -149,6 +291,11 @@ class ShopDetail: BaseActivity(), View.OnClickListener {
             TypedValue.COMPLEX_UNIT_PX,
             resources.getDimension(R.dimen.dimen14)
         )
+
+        binding.viewAllLayout.setSmallTextSize(
+            TypedValue.COMPLEX_UNIT_PX,
+            resources.getDimension(R.dimen.dimen14)
+        )
     }
 
     private fun setUpOnClick() {
@@ -166,15 +313,26 @@ class ShopDetail: BaseActivity(), View.OnClickListener {
     }
 
     private fun setUpBackLayout() {
-        binding.back.tvBack.text = resources.getText(R.string.hello_pet)
+        binding.back.tvBack.text = resources.getText(R.string.categories)
         binding.back.backLayout.setOnClickListener {
             finish()
         }
     }
 
     override fun onClick(v: View?) {
-        val intent = Intent(this, ProductListingActivity::class.java)
-        startActivity(intent)
+        v?.let {
+            Log.d("ShopDetail", "onClick: ${it.id}")
+            when (it.id) {
+                R.id.view_all_layout -> {
+                    Toast.makeText(this, "View All Click", Toast.LENGTH_SHORT).show()
+                    // TODO: view all click
+                }
+                else -> {
+                    val intent = Intent(this, ProductListingActivity::class.java)
+                    startActivity(intent)
+                }
+            }
+        }
     }
 
 }

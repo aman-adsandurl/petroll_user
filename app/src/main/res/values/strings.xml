@@ -86,6 +86,7 @@
     <string name="consultation_fee">Consultation Fee</string>
     <string name="wishlist_back">Wishlist</string>
     <string name="product">Products</string>
+    <string name="categories">Categories</string>
     <string name="select_address">Select\nAddress</string>
     <string name="add_new_address">Add New Address</string>
     <string name="ongoing">Ongoing</string>
@@ -127,6 +128,7 @@
     <string name="medicine">Medicine</string>
     <string name="bed">Bed</string>
     <string name="homes">Homes</string>
+    <string name="view_all">View All</string>
     <string name="benefits">Benefits</string>
     <string name="rating_review">Ratings and Reviews</string>
     <string name="add_cart">Add to Cart</string>
