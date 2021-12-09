@@ -30,17 +30,29 @@ class ShopDetail : BaseActivity(), View.OnClickListener {
 
     private fun setUpIconLayout() {
         binding.iconLayout.iclCheck.setImageResource(
-            R.drawable.ic_calendar,
-            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
-        )
-        binding.iconLayout.iclFav.setImageResource(
             R.drawable.ic_fav_top,
             AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
         )
+        //bookmark icon
+
+        binding.iconLayout.iclFav.setImageResource(
+            R.drawable.ic_order,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my orders icon
+
         binding.iconLayout.iclWish.setImageResource(
             R.drawable.ic_wishlist,
             AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
         )
+        //my wishlist icon
+
+        binding.iconLayout.icForthIcon.visibility = View.VISIBLE
+        binding.iconLayout.icForthIcon.setImageResource(
+            R.drawable.ic_cart,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my cart icon
 
         binding.foodLayout.setSmallCircle()
         binding.accesoryLayout.setSmallCircle()

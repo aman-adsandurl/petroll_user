@@ -1,6 +1,8 @@
 package com.petroll.ui.dashboard.market.marketpackage.detail
 
 import android.os.Bundle
+import android.view.View
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.GridLayoutManager
 import com.petroll.R
 import com.petroll.databinding.ActivityProductListingBinding
@@ -34,5 +36,30 @@ class ProductListingActivity : BaseActivity() {
         binding.back.backLayout.setOnClickListener {
             finish()
         }
+
+        binding.iconLayout.iclCheck.setImageResource(
+            R.drawable.ic_fav,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //bookmark
+
+        binding.iconLayout.iclFav.setImageResource(
+            R.drawable.ic_wishlist,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my wishlist
+
+        binding.iconLayout.iclWish.setImageResource(
+            R.drawable.ic_order,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my cart
+
+        binding.iconLayout.icForthIcon.visibility = View.VISIBLE
+        binding.iconLayout.icForthIcon.setImageResource(
+            R.drawable.ic_cart,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my cart icon
     }
 }
