@@ -53,7 +53,7 @@ class ProductListingActivity : BaseActivity() {
             R.drawable.ic_order,
             AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
         )
-        //my cart
+        //my orders
 
         binding.iconLayout.icForthIcon.visibility = View.VISIBLE
         binding.iconLayout.icForthIcon.setImageResource(

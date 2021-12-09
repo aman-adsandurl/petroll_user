@@ -6,6 +6,7 @@ import android.util.DisplayMetrics
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.RelativeLayout
+import androidx.appcompat.content.res.AppCompatResources
 import com.petroll.R
 import com.petroll.databinding.ActivityProductDetailBinding
 import com.petroll.ui.cart.CartActivity
@@ -13,7 +14,7 @@ import com.petroll.utils.BaseActivity
 import com.petroll.utils.ViewPagerAdapter
 
 
-class ProductDetailActivity: BaseActivity() {
+class ProductDetailActivity : BaseActivity() {
 
     var screenHeight: Int = 0
     var screenWidth: Int = 0
@@ -52,6 +53,25 @@ class ProductDetailActivity: BaseActivity() {
             finish()
             showBottomBar()
         }
+
+        binding.iconLayout.iclCheck.setImageResource(
+            R.drawable.ic_share_post,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //share
+        //TODO: change share icon
+
+        binding.iconLayout.iclFav.setImageResource(
+            R.drawable.ic_wishlist,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my wishlist
+
+        binding.iconLayout.iclWish.setImageResource(
+            R.drawable.ic_cart,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my cart
     }
 
     private fun updateDimen() {
