@@ -22,6 +22,7 @@ class ProductDetailActivity : BaseActivity() {
 
     lateinit var binding: ActivityProductDetailBinding
 
+    var itemsQuantity: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +42,29 @@ class ProductDetailActivity : BaseActivity() {
         binding.rlVpView.layoutParams = vpParam
 
         hideBottomBar(getString(R.string.add_cart))
-        nextClickListener(Intent(this, CartActivity::class.java))
+
+        binding.tvQuant.text = itemsQuantity.toString()
+
+        binding.tvMinus.setOnClickListener {
+            if (itemsQuantity > 1) {
+                itemsQuantity--
+                binding.tvQuant.text = itemsQuantity.toString()
+            }
+        }
+
+        binding.tvAdd.setOnClickListener {
+            itemsQuantity++
+            binding.tvQuant.text = itemsQuantity.toString()
+        }
+
+        baseBind.rlNext.setOnClickListener {
+            if (baseBind.tvButton.text == getString(R.string.view_cart)) {
+                startActivity(Intent(this, CartActivity::class.java))
+            } else {
+                setBottomBarText(getString(R.string.view_cart))
+            }
+        }
+
         setViewPager()
 
         setUpButton()
@@ -50,16 +73,19 @@ class ProductDetailActivity : BaseActivity() {
     private fun setUpButton() {
         binding.back.tvBack.text = getString(R.string.product_detail)
         binding.back.backLayout.setOnClickListener {
-            finish()
-            showBottomBar()
+            if (baseBind.tvButton.text == getString(R.string.view_cart)) {
+                setBottomBarText(getString(R.string.add_cart))
+            } else {
+                finish()
+                showBottomBar()
+            }
         }
 
         binding.iconLayout.iclCheck.setImageResource(
-            R.drawable.ic_share_post,
-            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+            R.drawable.ic_share,
+            AppCompatResources.getColorStateList(this, android.R.color.transparent)
         )
         //share
-        //TODO: change share icon
 
         binding.iconLayout.iclFav.setImageResource(
             R.drawable.ic_wishlist,
