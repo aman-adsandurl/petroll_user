@@ -139,6 +139,7 @@
     <string name="address">Address</string>
     <string name="payment">Payment</string>
     <string name="your_cart">Your Cart</string>
+    <string name="cart_details">Cart Details</string>
     <string name="checkout">Checkout</string>
     <string name="place_order">Place Order</string>
     <string name="shipping">Shipping To</string>
@@ -158,4 +159,11 @@
     <string name="place_your_bid">Place Your Bid</string>
     <string name="hint_email_only">Enter Email</string>
     <string name="hint_mobile">Enter Mobile Number</string>
+    <string name="bag_discount">Bag Discount</string>
+    <string name="bag_total">Bag Total</string>
+    <string name="coupon_discount">Coupon Discount</string>
+    <string name="apply_coupon">Apply Coupon</string>
+    <string name="order_total">Order Total</string>
+    <string name="vat">Vat</string>
+    <string name="total">Total</string>
 </resources>

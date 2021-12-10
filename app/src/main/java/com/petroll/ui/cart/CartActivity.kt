@@ -2,6 +2,7 @@ package com.petroll.ui.cart
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -29,7 +30,7 @@ class CartActivity : BaseActivity() {
         setUpBottomClickedView(false)
         hideBottomBar(getString(R.string.confirm_order))
         backButtonHandling()
-        binding.back.tvBack.text = getString(R.string.your_cart)
+        binding.back.tvBack.text = getString(R.string.cart_details)
         setNextClick()
         setUpViewPager()
     }
@@ -39,14 +40,14 @@ class CartActivity : BaseActivity() {
         baseBind.rlNext.setOnClickListener {
             when (binding.vpFragments.currentItem) {
                 0 -> {
-                    binding.vpFragments.setCurrentItem(1)
+                    binding.vpFragments.currentItem = 1
                     setBottomBarText(getString(R.string.checkout))
                     binding.back.tvBack.text = getString(R.string.address)
                     binding.topProgress.ivAddress.setColorFilter(ContextCompat.getColor(this,R.color.indicator_highlight))
                     binding.topProgress.tvAddress.setTextColor(ContextCompat.getColor(this, R.color.indicator_highlight))
                 }
                 1 -> {
-                    binding.vpFragments.setCurrentItem(2)
+                    binding.vpFragments.currentItem = 2
                     binding.back.tvBack.text = getString(R.string.payment)
                     setBottomBarText(getString(R.string.place_order))
                     binding.topProgress.ivPayment.setColorFilter(ContextCompat.getColor(this,R.color.indicator_highlight))
@@ -62,14 +63,20 @@ class CartActivity : BaseActivity() {
         }
     }
 
-    fun backButtonHandling() {
+    private fun backButtonHandling() {
+        binding.iclFav.setImageResource(
+            R.drawable.ic_wishlist,
+            AppCompatResources.getColorStateList(this, R.color.skip_circle_color)
+        )
+        //my wishlist
+
         binding.back.backLayout.setOnClickListener {
             when (binding.vpFragments.currentItem) {
                 0 -> {
                     finish()
                 }
                 1 -> {
-                    binding.vpFragments.setCurrentItem(0)
+                    binding.vpFragments.currentItem = 0
                     binding.back.tvBack.text = getString(R.string.your_cart)
                     setBottomBarText(getString(R.string.confirm_order))
 //                    backButtonHandling()
@@ -78,7 +85,7 @@ class CartActivity : BaseActivity() {
                     binding.topProgress.tvAddress.setTextColor(ContextCompat.getColor(this, R.color.top_text_color))
                 }
                 else -> {
-                    binding.vpFragments.setCurrentItem(1)
+                    binding.vpFragments.currentItem = 1
                     binding.back.tvBack.text = getString(R.string.address)
                     setBottomBarText(getString(R.string.checkout))
                     binding.topProgress.ivPayment.setColorFilter(ContextCompat.getColor(this,R.color.line_color))
@@ -90,11 +97,11 @@ class CartActivity : BaseActivity() {
     }
 
     fun setUpViewPager() {
-        var adapter = MyPageAdapter(supportFragmentManager)
+        val adapter = MyPageAdapter(supportFragmentManager)
         binding.vpFragments.adapter = adapter
 
         binding.vpFragments.setOnTouchListener { _, _ ->
-            binding.vpFragments.getParent().requestDisallowInterceptTouchEvent(true)
+            binding.vpFragments.parent.requestDisallowInterceptTouchEvent(true)
             true
         }
     }

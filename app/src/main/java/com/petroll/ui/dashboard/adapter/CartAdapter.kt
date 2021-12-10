@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.petroll.R
 import com.petroll.utils.IconCircleLayout
 
-class CartAdapter(val context: Context): RecyclerView.Adapter<CartAdapter.ViewHolder>() {
+class CartAdapter(val context: Context) : RecyclerView.Adapter<CartAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.row_cart, parent, false)
@@ -22,10 +22,19 @@ class CartAdapter(val context: Context): RecyclerView.Adapter<CartAdapter.ViewHo
     }
 
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val iclFav = itemView.findViewById<IconCircleLayout>(R.id.icl_fav)
+        val iclFav: IconCircleLayout = itemView.findViewById(R.id.icl_fav)
+        val icDelete: IconCircleLayout = itemView.findViewById(R.id.icl_delete)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.iclFav.setImageResource(R.drawable.ic_wishlist, AppCompatResources.getColorStateList(context,R.color.skip_circle_color))
+        holder.iclFav.setImageResource(
+            R.drawable.ic_wishlist,
+            AppCompatResources.getColorStateList(context, R.color.skip_circle_color)
+        )
+
+        holder.icDelete.setImageResource(
+            R.drawable.ic_delete_black,
+            AppCompatResources.getColorStateList(context, R.color.skip_circle_color)
+        )
     }
 }
