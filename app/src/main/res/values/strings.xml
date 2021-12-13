@@ -166,4 +166,6 @@
     <string name="order_total">Order Total</string>
     <string name="vat">Vat</string>
     <string name="total">Total</string>
+    <string name="pay_at_visit">Pay At Visit</string>
+    <string name="other">Other</string>
 </resources>

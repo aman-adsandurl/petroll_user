@@ -33,50 +33,6 @@
                     android:src="@drawable/ic_follow_demo"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_name"
-                    android:textSize="@dimen/dimen16"
-                    android:layout_gravity="center"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Pay At Visit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-            <RadioButton
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_margin="@dimen/dimen10"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:padding="@dimen/dimen10"
-            android:layout_marginEnd="@dimen/dimen10"
-            android:layout_marginStart="@dimen/dimen10"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="@dimen/dimen60"
-                    android:layout_height="@dimen/dimen60"
-                    android:src="@drawable/ic_follow_demo"/>
-
-                <androidx.appcompat.widget.AppCompatTextView
                     android:textSize="@dimen/dimen16"
                     android:layout_gravity="center"
                     android:textColor="@color/black"
