@@ -53,6 +53,10 @@ class ShopActivity : BaseActivity() {
         //my cart
 
         binding.iconLayout.icFilter.visibility = View.VISIBLE
+        binding.iconLayout.icFilter.setImageResource(
+            R.drawable.ic_filter,
+            AppCompatResources.getColorStateList(this, android.R.color.transparent)
+        )
         binding.iconLayout.icFilter.setOnClickListener {
             Toast.makeText(this, "Filter Clicked", Toast.LENGTH_SHORT).show()
             //TODO: onFilterClick
