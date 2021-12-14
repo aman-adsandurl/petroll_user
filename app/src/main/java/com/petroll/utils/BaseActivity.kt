@@ -42,6 +42,13 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         setNavigationViewListener()
     }
 
+    fun onQuickAccessClick(onClick: () -> Unit) {
+        baseBind.addQuickAccess.visibility = View.VISIBLE
+        baseBind.addQuickAccess.setOnClickListener {
+            onClick()
+        }
+    }
+
     fun hideBottomBar(buttonText: String) {
         baseBind.rlNext.visibility = View.VISIBLE
         baseBind.tvButton.text = buttonText

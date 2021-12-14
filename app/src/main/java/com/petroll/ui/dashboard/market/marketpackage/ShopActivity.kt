@@ -65,5 +65,9 @@ class ShopActivity : BaseActivity() {
         binding.rvShop.layoutManager = GridLayoutManager(this, 2)
         val adapter = ShopAdapter(this@ShopActivity)
         binding.rvShop.adapter = adapter
+
+        onQuickAccessClick {
+            Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+        }
     }
 }
