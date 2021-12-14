@@ -1,6 +1,7 @@
 package com.petroll.ui.dashboard.market.marketpackage
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
 import com.petroll.databinding.ActivityAuctionBinding
@@ -46,7 +47,11 @@ class AuctionActivity : BaseActivity() {
 
     private fun setUpRecyclerView() {
         binding.rvAuction.layoutManager = LinearLayoutManager(this)
-            val adapter = AuctionAdapter(data, this)
-            binding.rvAuction.adapter = adapter
+        val adapter = AuctionAdapter(data, this)
+        binding.rvAuction.adapter = adapter
+
+        onQuickAccessClick {
+            Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+        }
     }
 }
