@@ -3,6 +3,7 @@ package com.petroll.ui.dashboard.service.servicepackage
 import android.content.Intent
 import android.os.Bundle
 import android.util.TypedValue
+import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import com.petroll.R
 import com.petroll.databinding.ActivityPeerBinding
@@ -82,6 +83,11 @@ class PeerActivity: BaseActivity() {
         binding.back.tvBack.text = resources.getText(R.string.peer)
         binding.back.backLayout.setOnClickListener {
             finish()
+        }
+
+        onQuickAccessClick {
+            Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+            //TODO: onQuickAccessClick
         }
     }
 

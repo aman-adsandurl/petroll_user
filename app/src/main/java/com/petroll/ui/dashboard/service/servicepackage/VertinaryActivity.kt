@@ -1,6 +1,7 @@
 package com.petroll.ui.dashboard.service.servicepackage
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
@@ -53,6 +54,11 @@ class VertinaryActivity: BaseActivity() {
             binding.rlPast.setBackgroundResource(0)
             setUpData("ongoing")
             setUpRecyclerView()
+        }
+
+        onQuickAccessClick {
+            Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+            //TODO: onQuickAccessClick
         }
     }
 
