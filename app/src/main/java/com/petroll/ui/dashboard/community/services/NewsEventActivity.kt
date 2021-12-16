@@ -1,6 +1,7 @@
 package com.petroll.ui.dashboard.community.services
 
 import android.os.Bundle
+import android.widget.Toast
 import com.petroll.R
 import com.petroll.databinding.ActivityNewsEventBinding
 import com.petroll.utils.BaseActivity
@@ -24,6 +25,11 @@ class NewsEventActivity: BaseActivity() {
         binding.back.tvBack.text = resources.getText(R.string.news_event_top)
         binding.back.backLayout.setOnClickListener {
             finish()
+        }
+
+        onQuickAccessClick {
+            Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+            //TODO:
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.petroll.ui.dashboard.community.services
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.petroll.R
 import com.petroll.databinding.ActivityMatingsBinding
@@ -34,6 +35,11 @@ class MatingsActivity: BaseActivity() {
         binding.back.tvBack.text = resources.getText(R.string.mating)
         binding.back.backLayout.setOnClickListener {
             finish()
+        }
+
+        onQuickAccessClick {
+            Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+            //TODO:
         }
     }
 }
