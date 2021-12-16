@@ -34,24 +34,23 @@ class BuyActivity : BaseActivity() {
     }
 
     private fun setUpRecyclerView() {
-        binding.iconLayout.iclCheck.setImageResource(
-            R.drawable.ic_calendar, AppCompatResources.getColorStateList(
-                this,
-                R.color.skip_circle_color
-            )
+        binding.icFilter.setImageResource(
+            R.drawable.ic_filter,
+            AppCompatResources.getColorStateList(this, android.R.color.transparent)
         )
-        binding.iconLayout.iclFav.setImageResource(
-            R.drawable.ic_fav_top, AppCompatResources.getColorStateList(
-                this,
-                R.color.skip_circle_color
-            )
+        binding.icFilter.setOnClickListener {
+            Toast.makeText(this, "Filter Clicked", Toast.LENGTH_SHORT).show()
+            //TODO: onFilterClick
+        }
+
+        binding.icSearch.setImageResource(
+            R.drawable.ic_search,
+            AppCompatResources.getColorStateList(this, android.R.color.transparent)
         )
-        binding.iconLayout.iclWish.setImageResource(
-            R.drawable.ic_wishlist, AppCompatResources.getColorStateList(
-                this,
-                R.color.skip_circle_color
-            )
-        )
+        binding.icSearch.setOnClickListener {
+            Toast.makeText(this, "Filter Clicked", Toast.LENGTH_SHORT).show()
+            //TODO: onFilterClick
+        }
 
         binding.rvShop.layoutManager = GridLayoutManager(this, 2)
         val adapter = BuyAdapter(this)
