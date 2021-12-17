@@ -49,6 +49,13 @@ open class BaseActivity : AppCompatActivity(), OnNavigationItemSelectedListener 
         }
     }
 
+    fun onAddClick(onClick: () -> Unit) {
+        baseBind.fab.visibility = View.VISIBLE
+        baseBind.fab.setOnClickListener {
+            onClick()
+        }
+    }
+
     fun hideBottomBar(buttonText: String) {
         baseBind.rlNext.visibility = View.VISIBLE
         baseBind.tvButton.text = buttonText

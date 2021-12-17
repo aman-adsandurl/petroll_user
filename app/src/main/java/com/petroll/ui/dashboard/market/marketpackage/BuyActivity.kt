@@ -59,5 +59,9 @@ class BuyActivity : BaseActivity() {
         onQuickAccessClick {
             Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
         }
+
+        onAddClick {
+            Toast.makeText(this, "Add click", Toast.LENGTH_SHORT).show()
+        }
     }
 }
