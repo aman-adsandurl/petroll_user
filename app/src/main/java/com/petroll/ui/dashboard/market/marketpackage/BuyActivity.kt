@@ -3,7 +3,6 @@ package com.petroll.ui.dashboard.market.marketpackage
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.recyclerview.widget.GridLayoutManager
 import com.petroll.R
 import com.petroll.databinding.ActivityBuyBinding
 import com.petroll.ui.dashboard.adapter.BuyAdapter
@@ -52,16 +51,17 @@ class BuyActivity : BaseActivity() {
             //TODO: onFilterClick
         }
 
-        binding.rvShop.layoutManager = GridLayoutManager(this, 2)
         val adapter = BuyAdapter(this)
         binding.rvShop.adapter = adapter
 
         onQuickAccessClick {
             Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
+            //TODO: onQuickAcessClick
         }
 
         onAddClick {
             Toast.makeText(this, "Add click", Toast.LENGTH_SHORT).show()
+            //TODO onAddClick
         }
     }
 }

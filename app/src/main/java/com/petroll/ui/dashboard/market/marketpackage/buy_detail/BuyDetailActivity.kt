@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import com.petroll.R
 import com.petroll.databinding.ActivityBuyDetailBinding
 import com.petroll.utils.BaseActivity
@@ -36,6 +37,11 @@ class BuyDetailActivity: BaseActivity() {
         binding.back.tvBack.text = resources.getText(R.string.item_detail)
         binding.back.backLayout.setOnClickListener {
             finish()
+        }
+
+        binding.icShare.setOnClickListener {
+            Toast.makeText(this, "Share Clicked", Toast.LENGTH_SHORT).show()
+            //TODO: onShareClick
         }
     }
 
