@@ -47,8 +47,8 @@ class BuyActivity : BaseActivity() {
             AppCompatResources.getColorStateList(this, android.R.color.transparent)
         )
         binding.icSearch.setOnClickListener {
-            Toast.makeText(this, "Filter Clicked", Toast.LENGTH_SHORT).show()
-            //TODO: onFilterClick
+            Toast.makeText(this, "Search Clicked", Toast.LENGTH_SHORT).show()
+            //TODO: onSearchClick
         }
 
         val adapter = BuyAdapter(this)
@@ -56,7 +56,7 @@ class BuyActivity : BaseActivity() {
 
         onQuickAccessClick {
             Toast.makeText(this, "Quick Access", Toast.LENGTH_SHORT).show()
-            //TODO: onQuickAcessClick
+            //TODO: onQuickAccessClick
         }
 
         onAddClick {

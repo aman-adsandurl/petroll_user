@@ -1,165 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="@dimen/dimen10"
-    app:cardCornerRadius="@dimen/dimen10"
-    android:layout_margin="@dimen/dimen10"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen10"
+    app:cardCornerRadius="@dimen/dimen10"
+    app:cardElevation="@dimen/dimen10">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:padding="@dimen/dimen5"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
-                app:cardCornerRadius="@dimen/dimen10"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content">
-            <ImageView
-                android:src="@drawable/ic_auction_sample"
-                android:layout_width="@dimen/dimen100"
-                android:layout_height="@dimen/dimen100"/>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="@dimen/dimen12"
-                android:textColor="@color/black"
-                android:alpha="0.7"
-                android:layout_marginTop="@dimen/dimen5"
-                android:layout_gravity="center"
-                android:text="@string/total_bidder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="@dimen/dimen12"
-                android:textColor="@color/black"
-                android:layout_gravity="center"
-                android:id="@+id/tv_bidder"
-                android:text="17"
-                android:layout_marginTop="@dimen/dimen5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="2">
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen5">
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_regular"
-                android:textStyle="bold"
-                android:text="Luxury Dog House"
-                android:textSize="@dimen/dimen16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/tv_type"
-                android:textColor="@color/black"
-                android:fontFamily="@font/poppins_regular"
-                android:text="Wooden Made"
-                android:textSize="@dimen/dimen14"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-
-           <RelativeLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
-
-               <TextView
-                   android:id="@+id/tv_user_type"
-                   android:textColor="@color/black"
-                   android:fontFamily="@font/poppins_regular"
-                   android:text="Owner"
-                   android:alpha="0.5"
-                   android:textSize="@dimen/dimen14"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"/>
-
-               <TextView
-                   android:id="@+id/tv_auction_end"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_alignParentEnd="true"
-                   android:alpha="0.5"
-                   android:fontFamily="@font/poppins_regular"
-                   android:text="@string/auction_ends"
-                   android:textColor="@color/black"
-                   android:textSize="@dimen/dimen14" />
-
-           </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/tv_user_name"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="Allam"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/dimen16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/tv_time_date"
-                    android:textColor="@color/blue_text"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="04h : 30m"
-                    android:layout_alignParentEnd="true"
-                    android:textSize="@dimen/dimen16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-            </RelativeLayout>
-
-            <TextView
-                android:id="@+id/tv_current_bid_title"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="@dimen/dimen5"
-                android:alpha="0.7"
-                android:fontFamily="@font/poppins_regular"
-                android:text="@string/current_bid"
-                android:textColor="@color/black"
-                android:textSize="@dimen/dimen12" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
-                android:fontFamily="@font/poppins_regular"
-                android:textSize="@dimen/dimen12"
-                android:textColor="@color/black"
-                android:layout_gravity="end"
-                android:id="@+id/tv_bid_amount"
-                android:text="AED 117"
-                android:layout_marginTop="@dimen/dimen5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dimen10">
+
+                    <ImageView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:src="@drawable/ic_auction_sample" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/total_bidder"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen12" />
+
+                <TextView
+                    android:id="@+id/tv_bidder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="17"
+                    android:textColor="@color/indicator_highlight"
+                    android:textSize="@dimen/dimen12" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Luxury Dog House"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Wooden Made"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen14" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_user_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Owner"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen14" />
+
+                    <TextView
+                        android:id="@+id/tv_auction_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/auction_ends"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen14" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Allam"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_time_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="04h : 30m"
+                        android:textColor="@color/blue_text"
+                        android:textSize="@dimen/dimen16" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_current_bid_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:alpha="0.7"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/current_bid"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen12" />
+
+                <TextView
+                    android:id="@+id/tv_bid_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/dimen5"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="AED 117"
+                    android:textColor="@color/indicator_highlight"
+                    android:textSize="@dimen/dimen12" />
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
 
     </LinearLayout>
 
